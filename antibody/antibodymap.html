@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covid-19 Draft Map</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <script src="serology.js"></script>
+  <link href="embed2.css" rel="stylesheet">
+  <style>.background {fill: transparent; stroke: transparent !important;}</style>
+</head>
+<body> 
+
+
+    <div class="map-container center-me">
+        <form name="chooser">
+            <div class="map-chooser" id="mapRadio" style="font-size: .875rem; line-height: 2!important;">
+              
+              <label for="totalcount"><input type="radio" id="totalcount" name="mapRadioGroup" value="totalcount" checked>Number of people tested</label>&nbsp;&nbsp; 
+              
+              
+              <label for="testrate"><input type="radio" id="testrate" name="mapRadioGroup" value="testrate">Test rate</label>&nbsp;&nbsp; 
+
+              
+              <label for="totalpct"><input type="radio" id="totalpct" name="mapRadioGroup" value="totalpct">Percent positive</label>&nbsp;&nbsp; 
+
+
+              <hr>
+
+               
+
+
+
+            </div>
+          </form> 
+        <div class="vis" id="map"></div>
+    </div>
+
+</div>
+</body>
+</html>

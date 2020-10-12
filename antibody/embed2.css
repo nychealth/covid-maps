@@ -1,0 +1,27 @@
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333;
+    background-color: #fff;
+}
+
+.map-container {
+    width: 100vmin;
+}
+.center-me {
+    margin: 0 auto;
+  }
+.vis {
+    height: 100vmin;
+    width: 90vmin;
+  }
+.background {
+  fill: transparent; stroke: transparent !important;
+}
+
+.map-chooser {
+  padding-left: 18px;
+}

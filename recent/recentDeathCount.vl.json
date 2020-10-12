@@ -1,0 +1,75 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "width": "container",
+    "height": "container",
+    "autosize": {"type": "fit", "contains": "padding"},
+    "layer":[
+      {
+      "data":{
+      "url": "MODZCTA_2010_WGS1984.topo.json",
+      "format": {"type": "topojson", "feature": "collection"}
+      },
+      "mark": {"type": "geoshape", "stroke": "#ffffff","fill":"lightgray"}
+    },{
+    "data": {
+      "url": "zcta_points.csv"
+    },
+    "transform": [
+      {
+        "lookup": "MODZCTA",
+        "from": {
+          "data": {"url": "https://raw.githubusercontent.com/nychealth/coronavirus-data/master/recent/recent-4-week-by-modzcta.csv"},
+          "key": "MODIFIED_ZCTA",
+          "fields": [
+            "MODIFIED_ZCTA",
+            "NEIGHBORHOOD_NAME",
+            "COVID_DEATH_COUNT_4WEEK"
+          ]
+        },
+        "default": "no data"
+      }
+    ],
+
+    "mark": {"type": "circle", "stroke": "#8A2BE2","fill":"red","fillOpacity": 0.5},
+    "encoding": {
+        "latitude":{"field":"lat","type": "quantitative"},
+        "longitude":{"field":"lon","type": "quantitative"},
+      "size": {
+        "bin": false,
+        "field": "COVID_DEATH_COUNT_4WEEK",
+        "type": "quantitative",
+        "scale": {"range": [0, 250]},
+        "legend": {
+          "title": "4-week deaths",
+          "titleFontSize": 10,
+          "orient": "top-left",
+          "symbolLimit": 5,
+          "symbolOpacity": 0.5,
+          "values":[5,10,25]
+
+        }
+      },
+      "strokeWidth": {
+        "condition": [
+        ],        
+        "value": 0.5
+      },
+      "tooltip": [
+        {
+          "field": "MODIFIED_ZCTA",
+          "type": "nominal",
+          "title": "ZIP Code"
+        },
+        {
+          "field": "NEIGHBORHOOD_NAME",
+          "type": "nominal",
+          "title": "Neighborhood"
+        },
+        {"field": "COVID_DEATH_COUNT_4WEEK",
+        "type": "quantitative",
+        "title": "Deaths"
+        }
+      ]
+    }
+  }]
+  }

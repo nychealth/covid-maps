@@ -1,0 +1,73 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "width": "container",
+    "height": "container",
+    "autosize": {
+      "type": "fit",
+      "contains": "padding"
+    },
+    "layer":[
+      {
+      "data":{
+      "url": "MODZCTA_2010_WGS1984.topo.json",
+      "format": {"type": "topojson", "feature": "collection"}
+      },
+      "mark": {"type": "geoshape", "stroke": "#ffffff","fill":"lightgray"}
+    },{
+    "data": {
+      "url": "MODZCTA_2010_WGS1984.topo.json",
+      "format": {"type": "topojson",
+        "feature": "collection"}
+    },
+    "transform": [{
+      "lookup": "properties.MODZCTA",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/nychealth/coronavirus-data/master/testing/antibody-by-modzcta.csv"
+        },
+        "key": "modzcta_first",
+        "fields": [
+          "modzcta_first",
+          "PERCENT_POSITIVE"]
+      }
+    }],
+
+    "mark": {
+      "type": "geoshape",
+      "stroke": "#FFFFFF"
+    },
+    "encoding": {
+        "color": {
+            "bin":false,
+            "field":"PERCENT_POSITIVE",
+            "type":"quantitative",
+            "scale": {"scheme": {"name":"purples","extent":[0.2,1.2]}},
+            "legend": {
+                "title": "Percent positive",
+                "titleFontSize": 10,
+                "orient":"top-left",
+                "gradientLength": 100
+            }
+        }   ,
+      "strokeWidth":{
+        "condition": [
+        ],
+        "value": 0.5
+      },
+        
+      "tooltip": [
+        {
+          "field": "properties.label",
+          "type": "nominal",
+          "title": "ZIP Code"
+        },
+        {
+          "field": "PERCENT_POSITIVE",
+          "type": "nominal",
+          "title": "Percent positive"
+        }
+      ]
+    }
+  }
+]
+}
