@@ -1,0 +1,87 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "width": "container",
+    "height": "container",
+    "autosize": {
+      "type": "fit",
+      "contains": "padding"
+    },
+    "layer":[
+      {
+      "data":{
+      "url": "MODZCTA_2010_WGS1984.topo.json",
+      "format": {"type": "topojson", "feature": "collection"}
+      },
+      "mark": {"type": "geoshape", "stroke": "#ffffff","fill":"lightgray"}
+    },{
+    "data": {
+      "url": "MODZCTA_2010_WGS1984.topo.json",
+      "format": {"type": "topojson",
+        "feature": "collection"}
+    },
+    "transform": [{
+      "lookup": "properties.MODZCTA",
+      "from": {
+        "data": {
+          "url": "mockdata-last2weeks-by-modzcta.csv"
+        },
+        "key": "modzcta",
+        "fields": ["modzcta","modzcta_name","percentpositivity_14day","people_tested","cases","daterange"]
+      }
+    }],
+    "mark": {
+      "type": "geoshape",
+      "stroke": "#FFFFFF"
+    },
+    "encoding": {
+        "color": {
+            "bin":false,
+            "field":"percentpositivity_14day",
+            "type":"quantitative",
+            "scale": {"scheme": {"name":"orangered","extent":[0.1,1.5]}},
+            "legend": {
+                "title": "14-day percent positive",
+                "titleFontSize": 10,
+                "orient":"top-left",
+                "gradientLength": 100
+            }
+        }   ,
+      "strokeWidth":{
+        "value": 0.5
+      },
+        
+      "tooltip": [
+        {
+          "field": "properties.label",
+          "type": "nominal",
+          "title": "ZIP Code"
+        },
+        {
+          "field": "modzcta_name",
+          "type": "nominal",
+          "title": "Neighborhood"
+        },
+        {
+          "field": "percentpositivity_14day",
+          "type": "quantitative",
+          "title": "Percent positive:"
+        },
+        {
+          "field": "people_tested",
+          "type": "quantitative",
+          "title": "People tested (reported so far)"
+        },
+        {
+          "field": "cases",
+          "type": "quantitative",
+          "title": "Case (reported so far)"
+        },
+        {"field": "daterange",
+        "type": "nominal",
+        "title": "Date range:"
+        }
+      ]
+    }
+  }
+]
+}

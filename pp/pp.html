@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covid-19 Draft Map</title>
+
+  <!-- Import vega dependencies that are compatible with IE11-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.6.11/core.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.8.7/polyfill.js"></script>
+  <script src="https://vega.github.io/vega/assets/promise.min.js"></script>
+  <script src="https://vega.github.io/vega/assets/symbol.min.js"></script>
+  <script src="https://vega.github.io/vega/assets/fetch.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/vega@5/build-es5/vega.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4/build-es5/vega-lite.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build-es5/vega-embed.js"></script>
+
+  
+  <link href="embed2.css" rel="stylesheet">
+  <style>.background {fill: transparent; stroke: transparent !important;}</style>
+</head>
+<body>
+
+  <!--circle.html now has all 5, with circles for case and death counts-->
+
+    <div class="map-container center-me">
+
+        <div class="vis" id="map"></div>
+        <br>
+    </div>
+
+</div>
+<script src="circle.js"></script>
+</body>
+</html>
