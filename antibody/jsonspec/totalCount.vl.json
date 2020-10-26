@@ -1,68 +1,99 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "width": "container",
-    "height": "container",
-    "autosize": {"type": "fit", "contains": "padding"},
-    "layer":[
-      {
-      "data":{
-      "url": "MODZCTA_2010_WGS1984.topo.json",
-      "format": {"type": "topojson", "feature": "collection"}
-      },
-      "mark": {"type": "geoshape", "stroke": "#ffffff","fill":"lightgray"}
-    },{
-    "data": {
-      "url": "zcta_points.csv"
-    },
-    "transform": [
-      {
-        "lookup": "MODZCTA",
-        "from": {
-          "data": {"url": "https://raw.githubusercontent.com/nychealth/coronavirus-data/master/testing/antibody-by-modzcta.csv"},
-          "key": "modzcta_first",
-          "fields": [
-            "modzcta_first",
-            "NUM_PEOP_TEST"
-          ]
-        },
-        "default": "no data"
-      }
-    ],
-
-    "mark": {"type": "circle","fill":"#ff7f67","fillOpacity": 0.75},
-    "encoding": {
-        "latitude":{"field":"lat","type": "quantitative"},
-        "longitude":{"field":"lon","type": "quantitative"},
-      "size": {
-        "bin": false,
-        "field": "NUM_PEOP_TEST",
-        "type": "quantitative",
-        "scale": {"range": [0, 1000]},
-        "legend": {
-          "title": "People tested",
-          "titleFontSize": 10,
-          "orient": "top-left",
-          "symbolLimit": 5,
-          "symbolOpacity": 0.5,
-          "values":[100,1000,5000]
-
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": "container",
+  "height": "container",
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "MODZCTA_2010_WGS1984.topo.json",
+        "format": {
+          "type": "topojson",
+          "feature": "collection"
         }
       },
-      "strokeWidth": {
-        "value": 0.5
+      "mark": {
+        "type": "geoshape",
+        "stroke": "#ffffff",
+        "fill": "lightgray"
+      }
+    },
+    {
+      "data": {
+        "url": "zcta_points.csv"
       },
-      "tooltip": [
+      "transform": [
         {
-          "field": "modzcta_first",
-          "type": "nominal",
-          "title": "ZIP"
+          "lookup": "MODZCTA",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/nychealth/coronavirus-data/master/testing/antibody-by-modzcta.csv"
+            },
+            "key": "modzcta_first",
+            "fields": [
+              "modzcta_first",
+              "NUM_PEOP_TEST"
+            ]
+          },
+          "default": "no data"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "fill": "#ff7f67",
+        "fillOpacity": 0.75
+      },
+      "encoding": {
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
         },
-        {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "size": {
+          "bin": false,
           "field": "NUM_PEOP_TEST",
           "type": "quantitative",
-          "title": "People tested"
-        }
-      ]
+          "scale": {
+            "range": [
+              0,
+              500
+            ]
+          },
+          "legend": {
+            "title": "People tested",
+            "titleFontSize": 10,
+            "orient": "top-left",
+            "symbolLimit": 5,
+            "symbolOpacity": 0.5,
+            "values": [
+              100,
+              1000,
+              5000
+            ]
+          }
+        },
+        "strokeWidth": {
+          "value": 0.5
+        },
+        "tooltip": [
+          {
+            "field": "modzcta_first",
+            "type": "nominal",
+            "title": "ZIP"
+          },
+          {
+            "field": "NUM_PEOP_TEST",
+            "type": "quantitative",
+            "title": "People tested"
+          }
+        ]
+      }
     }
-  }]
-  }
+  ]
+}
