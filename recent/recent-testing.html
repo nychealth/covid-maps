@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Covid-19 Draft Map</title>
+  <title>Covid-19 Map: testing over the last 4 weeks</title>
 
   <!-- Import vega dependencies that are compatible with IE11-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.6.11/core.js"></script>
@@ -15,31 +16,39 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@4/build-es5/vega-lite.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build-es5/vega-embed.js"></script>
 
-  
+
   <link href="embed2.css" rel="stylesheet">
-  <style>.background {fill: transparent; stroke: transparent !important;}</style>
+  <style>
+    .background {
+      fill: transparent;
+      stroke: transparent !important;
+    }
+  </style>
 </head>
+
 <body>
 
 
-    <div class="map-container center-me">
-        <form name="chooser">
-            <div class="map-chooser" id="mapRadio">
+  <div class="map-container center-me">
+    <form name="chooser">
+      <div class="map-chooser" id="mapRadio">
 
-              <label for="deathrate"><input type="radio" id="perpos" name="mapRadioGroup" value="Perpos" checked>Percent positivity</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              
-                <label for="rate"><input type="radio" id="rate" name="mapRadioGroup" value="Testrate">Test rate</label>
-<hr>
-                
+        <label for="deathrate"><input type="radio" id="perpos" name="mapRadioGroup" value="Perpos" checked>Percent
+          positivity</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <label for="rate"><input type="radio" id="rate" name="mapRadioGroup" value="Testrate">Test rate</label>
+        <hr>
 
 
-            </div>
-          </form> 
-        <div class="vis" id="map"></div>
-        <br>
-    </div>
 
-</div>
-<script src="test.js"></script>
+      </div>
+    </form>
+    <div class="vis" id="map"></div>
+    <br>
+  </div>
+
+  </div>
+  <script src="test.js"></script>
 </body>
+
 </html>
