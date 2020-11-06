@@ -1,0 +1,178 @@
+modzcta,modzcta_name,percentpositivity_14day,people_tested,cases,daterange
+10001,Chelsea/NoMad/West Chelsea,0.89,1687,18,September 27-October 10
+10002,Chinatown/Lower East Side,0.78,3589,26,September 27-October 10
+10003,East Village/Gramercy/Greenwich Village,0.95,3356,32,September 27-October 10
+10004,Financial District,0.85,235,4,September 27-October 10
+10005,Financial District,1.07,562,7,September 27-October 10
+10006,Financial District,1,201,1,September 27-October 10
+10007,TriBeCa,0.58,516,3,September 27-October 10
+10009,Alphabet City/East Village/Stuyvesant Town-Cooper Village,0.57,3333,20,September 27-October 10
+10010,Flatiron/Gramercy/Kips Bay,0.52,2677,17,September 27-October 10
+10011,Chelsea,0.6,3663,25,September 27-October 10
+10012,Greenwich Village/SoHo,1.56,1474,24,September 27-October 10
+10013,Hudson Square/Little Italy/SoHo/TriBeCa,0.52,1730,9,September 27-October 10
+10014,Hudson Square/Meatpacking District/West Village,0.86,2212,21,September 27-October 10
+10016,Kips Bay/Murray Hill/NoMad,0.98,3568,36,September 27-October 10
+10017,East Midtown/Murray Hill,0.73,954,8,September 27-October 10
+10018,Hell's Kitchen/Midtown Manhattan,2.11,568,14,September 27-October 10
+10019,Hell's Kitchen/Midtown Manhattan,0.57,2826,17,September 27-October 10
+10021,Lenox Hill/Upper East Side,0.55,2935,18,September 27-October 10
+10022,East Midtown,0.35,1981,9,September 27-October 10
+10023,Lincoln Square,0.62,3711,23,September 27-October 10
+10024,Upper West Side,0.38,3976,19,September 27-October 10
+10025,Manhattan Valley/Morningside Heights/Upper West Side,0.62,7058,50,September 27-October 10
+10026,Central Harlem (South),0.9,2100,20,September 27-October 10
+10027,Central Harlem (South)/Morningside Heights/West Harlem,0.53,3965,21,September 27-October 10
+10028,Upper East Side/Yorkville,0.79,2903,23,September 27-October 10
+10029,East Harlem,0.93,3329,38,September 27-October 10
+10030,Central Harlem (North),1.15,1300,16,September 27-October 10
+10031,Hamilton Heights/West Harlem,1.45,2488,38,September 27-October 10
+10032,Washington Heights (South),1.65,2610,43,September 27-October 10
+10033,Washington Heights (North)/Washington Heights (South),1.46,2398,41,September 27-October 10
+10034,Inwood/Washington Heights (North),1.36,1690,24,September 27-October 10
+10035,East Harlem,1.49,1680,24,September 27-October 10
+10036,Hell's Kitchen/Midtown Manhattan,0.36,1680,9,September 27-October 10
+10037,Central Harlem (North)/East Harlem,0.78,899,7,September 27-October 10
+10038,Chinatown/Financial District,1.07,1305,16,September 27-October 10
+10039,Central Harlem (North)/Washington Heights (South),1.38,941,11,September 27-October 10
+10040,Washington Heights (North),1.73,1850,33,September 27-October 10
+10044,Roosevelt Island,0.41,490,3,September 27-October 10
+10065,Lenox Hill/Upper East Side,0.42,2388,9,September 27-October 10
+10069,Lincoln Square,0.63,478,3,September 27-October 10
+10075,Lenox Hill/Upper East Side,0.94,1707,16,September 27-October 10
+10128,Upper East Side/Yorkville,0.66,3939,21,September 27-October 10
+10280,Battery Park City,0.65,462,2,September 27-October 10
+10282,Battery Park City,0,280,,September 27-October 10
+10301,Silver Lake/St. George,1.73,1679,37,September 27-October 10
+10302,Elm Park,1.31,688,13,September 27-October 10
+10303,Graniteville/Mariner's Harbor/Port Ivory,0.81,992,8,September 27-October 10
+10304,New Dorp/Todt Hill,1.71,1814,29,September 27-October 10
+10305,Arrochar/Midland Beach/Shore Acres/South Beach Ocean Breeze,1.95,1693,41,September 27-October 10
+10306,Lighthouse Hill/Midland Beach/New Dorp/Oakwood,1.81,2323,42,September 27-October 10
+10307,Tottenville,4.45,584,27,September 27-October 10
+10308,Great Kills,2.21,1084,28,September 27-October 10
+10309,Charleston/Prince's Bay/Woodrow,2.28,1317,30,September 27-October 10
+10310,Port Richmond/Randall Manor/West Brighton,2.38,1094,27,September 27-October 10
+10312,Annadale/Rossville,2.06,2332,52,September 27-October 10
+10314,Bloomfield/Freshkills Park,1.89,3807,81,September 27-October 10
+10451,Concourse/Melrose,1.84,1794,31,September 27-October 10
+10452,Concourse/Highbridge,2.19,2466,61,September 27-October 10
+10453,Morris Heights/Mount Hope/University Heights,2.47,2426,64,September 27-October 10
+10454,Mott Haven/Port Morris,0.47,1271,7,September 27-October 10
+10455,Mott Haven,1.9,1317,23,September 27-October 10
+10456,Claremont/Morrisania,1.23,2921,42,September 27-October 10
+10457,Belmont/Claremont/Mount Hope/Tremont,1.66,2284,40,September 27-October 10
+10458,Belmont/Fordham University/Kingsbridge,1.14,2805,37,September 27-October 10
+10459,Charlotte Gardens/Hunts Point,1.52,1575,27,September 27-October 10
+10460,Charlotte Gardens/Tremont/Van Nest/West Farms,1.6,1874,33,September 27-October 10
+10461,Morris Park/Pelham Bay/Westchester Square,1.81,1994,32,September 27-October 10
+10462,Parkchester/Pelham Parkway/Van Nest/Westchester Square,1.61,2726,50,September 27-October 10
+10463,Kingsbridge/Marble Hill/Riverdale/Spuyten Duyvil,0.97,2979,34,September 27-October 10
+10464,City Island,1.06,188,3,September 27-October 10
+10465,Country Club/Throgs Neck,1.79,1679,35,September 27-October 10
+10466,Edenwald/Wakefield,1.12,2491,29,September 27-October 10
+10467,Allerton/Norwood/Pelham Parkway/Williamsbridge,1.39,3656,52,September 27-October 10
+10468,Fordham/Kingsbridge/University Heights,2.13,2297,50,September 27-October 10
+10469,Allerton/Baychester/Pelham Gardens/Williamsbridge,1.45,2344,37,September 27-October 10
+10470,Wakefield/Woodlawn,1.41,569,9,September 27-October 10
+10471,Fieldston/North Riverdale/Riverdale,0.77,1295,8,September 27-October 10
+10472,Soundview,1.7,1946,33,September 27-October 10
+10473,Castle Hill/Clason Point/Soundview,1.96,1938,37,September 27-October 10
+10474,Hunts Point,0.93,322,3,September 27-October 10
+10475,Co-op City/Edenwald,1.07,1405,16,September 27-October 10
+11004,Bellerose/Douglaston-Little Neck,0.79,636,4,September 27-October 10
+11101,Astoria (South)/Long Island City/Sunnyside,0.92,2181,20,September 27-October 10
+11102,Astoria (North),1.86,1775,45,September 27-October 10
+11103,Astoria (North)/Astoria (South),1.33,1882,27,September 27-October 10
+11104,Sunnyside,0.63,1117,7,September 27-October 10
+11105,Ditmars Steinway,1.59,1763,28,September 27-October 10
+11106,Astoria (South),1.52,1902,29,September 27-October 10
+11109,Long Island City,0.55,362,2,September 27-October 10
+11201,Brooklyn Heights/DUMBO/Downtown Brooklyn,0.28,4300,19,September 27-October 10
+11203,East Flatbush (North)/East Flatbush (South),1.09,2654,30,September 27-October 10
+11204,Bensonhurst/Mapleton,6.19,2310,147,September 27-October 10
+11205,Bedford-Stuyvesant (West)/Clinton Hill/Fort Greene,1.46,2466,35,September 27-October 10
+11206,Williamsburg (South),1.61,4172,69,September 27-October 10
+11207,Cypress Hills/East New York,1.85,3031,56,September 27-October 10
+11208,Cypress Hills/East New York,2.61,2530,68,September 27-October 10
+11209,Bay Ridge/Fort Hamilton,1.53,2751,45,September 27-October 10
+11210,Flatlands/Midwood,5.86,2492,159,September 27-October 10
+11211,East Williamsburg/Williamsburg (North)/Williamsburg (South),2.11,6588,137,September 27-October 10
+11212,Ocean Hill-Brownsville,1.21,2641,31,September 27-October 10
+11213,Crown Heights (East),2.11,2510,50,September 27-October 10
+11214,Bath Beach/Bensonhurst/Gravesend,1.94,2881,63,September 27-October 10
+11215,Gowanus/Park Slope/Windsor Terrace,0.5,4375,27,September 27-October 10
+11216,Bedford-Stuyvesant (West)/Crown Heights (West),1.01,3077,36,September 27-October 10
+11217,Boerum Hill/Park Slope,0.76,2897,22,September 27-October 10
+11218,Kensington/Windsor Terrace,3.22,3419,120,September 27-October 10
+11219,Borough Park,8.26,2989,254,September 27-October 10
+11220,Sunset Park,2.28,2809,67,September 27-October 10
+11221,Bedford-Stuyvesant (East)/Bushwick,0.85,3771,36,September 27-October 10
+11222,Greenpoint,0.67,2823,21,September 27-October 10
+11223,Gravesend/Homecrest,7.37,3598,285,September 27-October 10
+11224,Brighton Beach/Coney Island/Seagate,3.44,1540,57,September 27-October 10
+11225,Crown Heights (West)/Prospect Lefferts Gardens,1.13,2750,34,September 27-October 10
+11226,Flatbush/Prospect Lefferts Gardens,1.11,3886,46,September 27-October 10
+11228,Bath Beach/Dyker Heights,2.01,1491,24,September 27-October 10
+11229,Gerritsen Beach/Homecrest/Sheepshead Bay,4.37,3408,159,September 27-October 10
+11230,Midwood,6.71,4499,305,September 27-October 10
+11231,Carroll Gardens/Cobble Hill/Red Hook,0.52,2111,12,September 27-October 10
+11232,Sunset Park,1.47,1022,13,September 27-October 10
+11233,Bedford-Stuyvesant (East)/Ocean Hill-Brownsville,1.04,2503,27,September 27-October 10
+11234,Bergen Beach/Flatlands/Marine Park/Mill Basin,2.61,3486,97,September 27-October 10
+11235,Brighton Beach/Manhattan Beach/Sheepshead Bay,3.52,3043,116,September 27-October 10
+11236,Canarsie,1.48,3106,50,September 27-October 10
+11237,Bushwick/East Williamsburg,1.69,2006,38,September 27-October 10
+11238,Clinton Hill/Prospect Heights,0.45,3996,18,September 27-October 10
+11239,East New York,1.73,521,9,September 27-October 10
+11354,Flushing/Murray Hill,1.48,1625,28,September 27-October 10
+11355,Flushing/Murray Hill/Queensboro Hill,0.77,2074,20,September 27-October 10
+11356,College Point,1.77,793,14,September 27-October 10
+11357,Whitestone,1.65,1334,21,September 27-October 10
+11358,Auburndale/Murray Hill,1.06,1412,14,September 27-October 10
+11360,Bayside (North),0.85,819,7,September 27-October 10
+11361,Bayside (North)/Bayside (South),1.22,1062,14,September 27-October 10
+11362,Douglaston-Little Neck,0.98,613,8,September 27-October 10
+11363,Douglaston-Little Neck,0.34,296,2,September 27-October 10
+11364,Bayside (South)/Oakland Gardens,1.93,1086,21,September 27-October 10
+11365,Auburndale/Fresh Meadows/Pomonok/Utopia,1.38,1593,24,September 27-October 10
+11366,Fresh Meadows/Hillcrest,2.3,479,13,September 27-October 10
+11367,Kew Gardens Hills/Pomonok,4.08,1619,67,September 27-October 10
+11368,Corona/North Corona,1.67,3106,60,September 27-October 10
+11369,Airport/East Elmhurst,1.01,1186,11,September 27-October 10
+11370,Jackson Heights/Rikers Island,2.15,929,19,September 27-October 10
+11372,Jackson Heights,2,2605,52,September 27-October 10
+11373,Elmhurst,1.99,3367,69,September 27-October 10
+11374,Rego Park,2.69,2006,59,September 27-October 10
+11375,Forest Hills,1.95,3185,61,September 27-October 10
+11377,Woodside,1.69,3072,52,September 27-October 10
+11378,Maspeth,1.1,1186,14,September 27-October 10
+11379,Middle Village,1.88,1280,26,September 27-October 10
+11385,Glendale/Ridgewood,1.68,3503,61,September 27-October 10
+11411,Cambria Heights,1.17,685,11,September 27-October 10
+11412,St. Albans,1.19,1340,9,September 27-October 10
+11413,Laurelton/Rosedale,2.04,1419,29,September 27-October 10
+11414,Hamilton Beach/Howard Beach/Lindenwood,2,948,20,September 27-October 10
+11415,Kew Gardens,3.01,1164,37,September 27-October 10
+11416,Ozone Park,2.45,693,19,September 27-October 10
+11417,Ozone Park,2.12,989,24,September 27-October 10
+11418,Richmond Hill,2.08,1297,23,September 27-October 10
+11419,Richmond Hill/South Ozone Park,1.95,1335,30,September 27-October 10
+11420,South Ozone Park,3.1,1355,43,September 27-October 10
+11421,Woodhaven,1.38,1158,14,September 27-October 10
+11422,Rosedale,0.18,1128,2,September 27-October 10
+11423,Hollis/Holliswood,2.48,1169,31,September 27-October 10
+11426,Bellerose,2.17,644,13,September 27-October 10
+11427,Bellerose/Hollis Hills/Holliswood,1.01,795,9,September 27-October 10
+11428,Queens Village,1.33,675,8,September 27-October 10
+11429,Queens Village,1.32,1058,22,September 27-October 10
+11432,Hillcrest/Jamaica Estates/Jamaica Hills,3.3,2185,82,September 27-October 10
+11433,Jamaica,1.65,1152,21,September 27-October 10
+11434,Airport/South Jamaica/Springfield Gardens/St. Albans,1.05,2103,24,September 27-October 10
+11435,Briarwood/Jamaica,3.17,1893,59,September 27-October 10
+11436,South Jamaica/South Ozone Park,1.65,668,11,September 27-October 10
+11691,Edgemere/Far Rockaway,6.47,2382,151,September 27-October 10
+11692,Arverne/Edgemere,1.69,711,12,September 27-October 10
+11693,Arverne/Broad Channel,1.2,500,6,September 27-October 10
+11694,Belle Harbor-Neponsit/Rockaway Park,1.43,838,14,September 27-October 10
+11697,Breezy Point,0,184,1,September 27-October 10
