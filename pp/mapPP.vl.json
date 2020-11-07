@@ -9,7 +9,7 @@
   "layer": [
     {
       "data": {
-        "url": "MODZCTA_2010_WGS1984.topo.json",
+        "url": "MODZCTA_2010_RI99999_WGS1984_1_topoms.json",
         "format": {
           "type": "topojson",
           "feature": "collection"
@@ -23,7 +23,7 @@
     },
     {
       "data": {
-        "url": "MODZCTA_2010_WGS1984.topo.json",
+        "url": "MODZCTA_2010_RI99999_WGS1984_1_topoms.json",
         "format": {
           "type": "topojson",
           "feature": "collection"
