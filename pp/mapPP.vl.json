@@ -100,7 +100,7 @@
           {
             "field": "people_positive",
             "type": "quantitative",
-            "title": "People positive (reported to date)"
+            "title": "New people positive (reported to date)"
           },
           {
             "field": "daterange",
