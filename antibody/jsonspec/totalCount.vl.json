@@ -30,7 +30,7 @@
           "lookup": "MODZCTA",
           "from": {
             "data": {
-              "url": "https://raw.githubusercontent.com/nychealth/coronavirus-data/master/testing/antibody-by-modzcta.csv"
+              "url": "https://raw.githubusercontent.com/nychealth/coronavirus-data/master/totals/antibody-by-modzcta.csv"
             },
             "key": "modzcta_first",
             "fields": [
