@@ -34,7 +34,7 @@
           "lookup": "properties.MODZCTA",
           "from": {
             "data": {
-              "url": "mockdata-last7days-by-modzcta.csv"
+              "url": "https://raw.githubusercontent.com/nychealth/coronavirus-data/master/latest/last7days-by-modzcta.csv"
             },
             "key": "modzcta",
             "fields": [
@@ -42,7 +42,7 @@
               "modzcta_name",
               "percentpositivity_7day",
               "people_tested",
-              "cases",
+              "people_positive",
               "daterange"
             ]
           }
@@ -98,9 +98,9 @@
             "title": "People tested (reported to date)"
           },
           {
-            "field": "cases",
+            "field": "people_positive",
             "type": "quantitative",
-            "title": "New cases (reported to date)"
+            "title": "People positive"
           },
           {
             "field": "daterange",
