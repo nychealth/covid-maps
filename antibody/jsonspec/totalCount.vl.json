@@ -35,6 +35,7 @@
             "key": "modzcta_first",
             "fields": [
               "modzcta_first",
+              "NEIGHBORHOOD_NAME",
               "NUM_PEOP_TEST"
             ]
           },
@@ -86,6 +87,11 @@
             "field": "modzcta_first",
             "type": "nominal",
             "title": "ZIP"
+          },
+          {
+            "field": "NEIGHBORHOOD_NAME",
+            "type": "nominal",
+            "title": "Neighborhood"
           },
           {
             "field": "NUM_PEOP_TEST",

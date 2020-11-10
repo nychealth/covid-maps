@@ -39,6 +39,7 @@
             "key": "modzcta_first",
             "fields": [
               "modzcta_first",
+              "NEIGHBORHOOD_NAME",
               "PERCENT_POSITIVE"
             ]
           }
@@ -78,6 +79,11 @@
             "field": "properties.label",
             "type": "nominal",
             "title": "ZIP Code"
+          },
+          {
+            "field": "NEIGHBORHOOD_NAME",
+            "type": "nominal",
+            "title": "Neighborhood"
           },
           {
             "field": "PERCENT_POSITIVE",
