@@ -43,6 +43,8 @@
               "percentpositivity_7day",
               "people_tested",
               "people_positive",
+              "median_daily_test_rate",
+              "adequately_tested",
               "daterange"
             ]
           }
@@ -96,6 +98,16 @@
             "field": "people_tested",
             "type": "quantitative",
             "title": "People tested (reported to date)"
+          },
+          {
+            "field": "median_daily_test_rate",
+            "type": "quantitative",
+            "title": "Median daily test rate per 100,000"
+          },
+          {
+            "field": "adequately_tested",
+            "type": "nominal",
+            "title": "Adequate testing sample?"
           },
           {
             "field": "people_positive",
