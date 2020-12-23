@@ -107,7 +107,7 @@ var vegaSpec =
     "layer": [
         {
             "data": {
-                "url": "js/MODZCTA_2010_RI99999_WGS1984_1_topoms.json",
+                "url": "https://nychealth.github.io/covid-maps/nr/js/MODZCTA_2010_RI99999_WGS1984_1_topoms.json",
                 "format": {
                     "type": "topojson",
                     "feature": "collection"
@@ -121,7 +121,7 @@ var vegaSpec =
         },
         {
             "data": {
-                "url": "js/MODZCTA_2010_RI99999_WGS1984_1_topoms.json",
+                "url": "https://nychealth.github.io/covid-maps/nr/js/MODZCTA_2010_RI99999_WGS1984_1_topoms.json",
                 "format": {
                     "type": "topojson",
                     "feature": "collection"
@@ -231,7 +231,7 @@ var vegaDotSpec = {
     "layer": [
         {
             "data": {
-                "url": "js/MODZCTA_2010_RI99999_WGS1984_1_topoms.json",
+                "url": "https://nychealth.github.io/covid-maps/nr/js/MODZCTA_2010_RI99999_WGS1984_1_topoms.json",
                 "format": {
                     "type": "topojson",
                     "feature": "collection"
@@ -245,7 +245,7 @@ var vegaDotSpec = {
         },
         {
             "data": {
-                "url": "js/zcta_points.csv"
+                "url": "https://nychealth.github.io/covid-maps/nr/js/zcta_points.csv"
             },
             "transform": [
                 {
