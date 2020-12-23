@@ -604,8 +604,8 @@ function changeMetric(y) {
     var label = '';
     let btn = document.getElementById(`chartbtn${y}`);
     //Turns off highlights
-    for (let button of document.querySelectorAll('.chartbutton')) button.classList.remove('xhighlight');
-    btn.classList.add('xhighlight');
+    for (let button of document.querySelectorAll('.chartbutton')) button.classList.remove('highlight');
+    btn.classList.add('highlight');
 
     if (y === 2) {
         metric = "PCTPOS";
@@ -832,8 +832,8 @@ function changeNeighborhood(zipCode) {
 function changeMap(x) {
     let btn = document.getElementById(`mb${x}`);
     //Turns off highlights
-    for (let button of document.querySelectorAll('.mapbutton')) button.classList.remove('xhighlight');
-    btn.classList.add('xhighlight');
+    for (let button of document.querySelectorAll('.mapbutton')) button.classList.remove('highlight');
+    btn.classList.add('highlight');
 
     if (x === 1) {
         vegaSpec.layer[1].encoding.color.field = 'median_daily_test_rate';
