@@ -14,7 +14,7 @@ h3 {
 
 .togglebutton {
   font-size: 16;
-  border-radius: 20px;
+  border-radius: 5px;
   font-weight: 400;
   padding: 7px 15px 1px;
   background-color: #eeeeee;
@@ -48,7 +48,7 @@ h3 {
   text-decoration: none;
 }
 
-.highlight {
+.xhighlight {
   background-color: #429ddd !important;
   color: #ffffff !important;
   font-weight: 550;
