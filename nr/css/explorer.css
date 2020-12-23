@@ -1,0 +1,304 @@
+h3 {
+  margin-bottom: 20px;
+}
+
+.background {
+  fill: transparent;
+  stroke: transparent !important;
+}
+
+#hidemap {
+  font-size: 12!important;
+  padding: 10px 10px 1px;
+}
+
+.togglebutton {
+  font-size: 16;
+  border-radius: 20px;
+  font-weight: 400;
+  padding: 7px 15px 1px;
+  background-color: #eeeeee;
+  color: #696969 !important;
+  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0, 07);
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  height: 40px!important;
+}
+
+.togglebutton:hover {
+  background-color: #bce3ff;
+  text-decoration: none;
+}
+
+.togglebutton2 {
+    height: 100% !important;
+  font-size: 16;
+  border-radius: 5px;
+  font-weight: 400;
+  background-color: #eeeeee;
+  color: #696969 !important;
+  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0, 07);
+  cursor: pointer;
+  display: inline-block;
+}
+
+.togglebutton2:hover {
+  background-color: #bce3ff;
+  text-decoration: none;
+}
+
+.highlight {
+  background-color: #429ddd !important;
+  color: #ffffff !important;
+  font-weight: 550;
+}
+
+html {
+  font-family: helvetica;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.inactivelink:hover {
+  background-color: #e7caec;
+}
+
+.toplink {
+  padding: 1px 6px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.toplink2 {
+  padding: 1px 6px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 200;
+  box-shadow: 0 0 7px 2px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.activelink {
+  background: #803D8D;
+  color: #ffffff;
+}
+
+.higher {
+  background-color: purple;
+  color: white;
+  font-weight: bold;
+}
+
+.lower {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+}
+
+.inactivelink {
+  background: #f9f9f9;
+  color: #5f5f5f;
+}
+
+.boroughs {
+  background: #424242;
+  color: #e0e0e0;
+}
+
+.boroughs:hover {
+  background: #464b79!important;
+}
+
+.vis {
+  height: 90vmin;
+  width: 100%;
+  fill: transparent;
+  stroke: transparent !important;
+}
+
+.vis2 {
+  height: 400px;
+  width: 100%;
+  fill: transparent;
+  stroke: transparent !important;
+}
+
+
+
+/* Styles from example */
+
+
+
+
+/* Example page specific styling. */
+
+
+html {
+  color: #111;
+  background: #FFF;
+  font-family: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: normal;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+code {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background: #EFEFEF;
+  font-weight: normal;
+  font-family: monospace;
+}
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.autocomplete-wrapper {
+  max-width: 40em;
+}
+
+.submitted--hidden {
+  display: none;
+}
+
+
+
+
+
+/* Map chart CSS */
+
+
+.grid-container {
+  display: grid;
+  grid-gap: 10px 0px;
+  font-size: 12px;
+  font-family: helvetica;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.grid-item {
+  padding-left: 2px;
+}
+
+.item1 {
+  grid-column: 1;
+  text-align: right;
+}
+
+.item2 {
+  grid-column: 2 / span 5;
+  text-align: right;
+}
+
+#lowbar {
+  height: 100%;
+  background: #979797;
+}
+
+#yourbar {
+  background: #979797;
+}
+
+#highbar {
+  background: #979797;
+}
+
+.barcontent {
+  color: white;
+  padding-right: 5px;
+  font-weight: bold;
+}
+
+.summary {
+  display: inline-block;
+  font-size: 13px;
+  width: 100%;
+  border-left: 5px solid #bfbfbf;
+  padding-left: 5px;
+  background-color: #f2f2f2;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+td {
+  text-align: right;
+}
+
+.tablebar2 {
+  height: 100%;
+  background-color: rgb(218, 240, 218);
+  padding-right: 3px;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.tablebar {
+  height: 100%;
+    width: 100%;
+      border-bottom: 5px solid rgb(189, 201, 189);
+      border-radius: 2px;
+
+}
+
+.tabledot {
+  border-right: 5px solid #ff34ce;
+  display: inline-block;
+}
+
+table th {
+  color: #4e4e4e ! important;
+}
+
+.table .thead-dark th {
+  color: #fff ! important;
+  background-color: #343a40;
+  border-color: #454d55;
+}
+
+.data-in {
+  font-weight: bold;
+  background-color: #707579;
+  color: #fff;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.median {
+  border-right: 5px solid #858585;
+  display: inline-block;
+}
+
+.lohi {
+  line-height: 38px;
+}
+
