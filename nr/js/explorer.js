@@ -747,12 +747,11 @@ function changeNeighborhood(zipCode) {
     document.querySelector('.submitted__last-location').innerHTML = zipCode; // shows ZIP
     document.querySelector('.submitted').classList.remove('submitted--hidden'); // reveals Facts panel
     zipCodeData = fullData.filter(neighborhood => neighborhood.MODIFIED_ZCTA == zipString); // Filters data-by-modzcta to just selected neighborhood
-    console.log("Data for your ZIP:");
-    console.log(zipCodeData); // Look Ma, you can see it in the console
+
 
     // getting boro data for cumulative table
     parentBoro = zipCodeData[0].BOROUGH_GROUP;
-    console.log('the parent boro is: ' + parentBoro);
+    console.log('The parent Borough is: ' + parentBoro);
 
     // This makes it so that filtering cityData doesn't break via "Staten Island" but causes other problems
     if (parentBoro === "Staten Island") {
@@ -863,7 +862,6 @@ function changeNeighborhood(zipCode) {
 
     }
 
-    console.log('zipString is ' + zipString + ', and metric is ' + metric);
 
 
     // Draws the chart based on the ZIP!
@@ -877,7 +875,6 @@ function changeNeighborhood(zipCode) {
 
     // Updates the distribution plot based on neighborhood
     tickSpec.layer[1].transform[0].filter = "datum.modzcta == " + zipCode;
-    console.log("filter = " + tickSpec.layer[1].transform[0].filter)
 
 
     //Draws the distribution plot
@@ -927,7 +924,6 @@ function changeMap(x) {
         tickSpec.layer[1].encoding.x.field = 'median_daily_test_rate';
         tickSpec.layer[1].encoding.tooltip[1].field = 'median_daily_test_rate';
         tickSpec.layer[1].encoding.tooltip[1].title = 'Daily test rate';
-        console.log(tickSpec)
         vegaEmbed('#ticks', tickSpec);
 
 
@@ -942,8 +938,14 @@ function changeMap(x) {
 
         if (rangeZip > rangeMed) {
             document.getElementById('medcomp').innerHTML = "&nbsp;higher&nbsp;"
+            document.getElementById('medcomp').classList.add("lower");
+            document.getElementById('medcomp').classList.remove("higher");
+            document.getElementById('medcomp').classList.remove("data-in");
         } else if (rangeZip < rangeMed) {
             document.getElementById('medcomp').innerHTML = "&nbsp;lower&nbsp;"
+            document.getElementById('medcomp').classList.add("higher");
+            document.getElementById('medcomp').classList.remove("lower");
+            document.getElementById('medcomp').classList.remove("data-in");
         } else if (rangeZip === rangeMed) {
             document.getElementById('medcomp').innerHTML = "&nbsp;equal to&nbsp;"
         }
@@ -965,8 +967,6 @@ function changeMap(x) {
         tickSpec.layer[1].encoding.x.field = 'percentpositivity_7day';
         tickSpec.layer[1].encoding.tooltip[1].field = 'percentpositivity_7day';
         tickSpec.layer[1].encoding.tooltip[1].title = 'Percent Positive';
-
-
         vegaEmbed('#ticks', tickSpec);
 
         rangeLo = minPP.percentpositivity_7day;
@@ -979,8 +979,14 @@ function changeMap(x) {
 
         if (rangeZip > rangeMed) {
             document.getElementById('medcomp').innerHTML = "&nbsp;higher&nbsp;"
+            document.getElementById('medcomp').classList.add("higher");
+            document.getElementById('medcomp').classList.remove("lower");
+            document.getElementById('medcomp').classList.remove("data-in");
         } else if (rangeZip < rangeMed) {
             document.getElementById('medcomp').innerHTML = "&nbsp;lower&nbsp;"
+            document.getElementById('medcomp').classList.add("lower");
+            document.getElementById('medcomp').classList.remove("higher");
+            document.getElementById('medcomp').classList.remove("data-in");
         } else if (rangeZip === rangeMed) {
             document.getElementById('medcomp').innerHTML = "&nbsp;equal to&nbsp;"
         }
@@ -1004,19 +1010,23 @@ function changeMap(x) {
 
         vegaEmbed('#ticks', tickSpec);
 
-        rangeZip = mapZipData[0].people_positive;
-        rangeMed = numMedian;
+        rangeZip = Number(mapZipData[0].people_positive);
+        rangeMed = Number(numMedian);
 
-        zipMargin = 100 * (maxPeople.people_positive - mapZipData[0].people_positive) / (maxPeople.people_positive - minPeople.people_positive);
-        medMargin = 100 * (maxPeople.people_positive - numMedian) / (maxPeople.people_positive - minPeople.people_positive);
 
-        if (rangeZip > rangeMed) {
-            document.getElementById('medcomp').innerHTML = "&nbsp;higher&nbsp;"
-        } else if (rangeZip < rangeMed) {
-            document.getElementById('medcomp').innerHTML = "&nbsp;lower&nbsp;"
+        if (rangeZip < rangeMed) {
+            document.getElementById('medcomp').innerHTML = "&nbsp;lower&nbsp;";
+            document.getElementById('medcomp').classList.add("lower");
+            document.getElementById('medcomp').classList.remove("higher");
+            document.getElementById('medcomp').classList.remove("data-in");
         } else if (rangeZip === rangeMed) {
             document.getElementById('medcomp').innerHTML = "&nbsp;equal to&nbsp;"
-        }
+        } else {
+            document.getElementById('medcomp').innerHTML = "&nbsp;higher&nbsp;";
+            document.getElementById('medcomp').classList.add("higher");
+            document.getElementById('medcomp').classList.remove("lower");
+            document.getElementById('medcomp').classList.remove("data-in");
+        };
 
     };
 
