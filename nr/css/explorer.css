@@ -3,8 +3,8 @@ a:not([href]):not([tabindex]) {
     text-decoration: none;
 }
 
-#bracket.table td, th {
-  line-height: 24px;
+#bracket.table td {
+  line-height: 24px!important;
 }
 
 h3 {
