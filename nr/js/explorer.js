@@ -166,7 +166,7 @@ var vegaSpec =
                         }
                     },
                     "legend": {
-                        "title": "Median daily test rate (per 100,000)",
+                        "title": "Daily test rate (per 100,000)",
                         "titleFontSize": 10,
                         "orient": "top-left",
                         "gradientLength": 100
@@ -189,7 +189,7 @@ var vegaSpec =
                     {
                         "field": "median_daily_test_rate",
                         "type": "quantitative",
-                        "title": "Daily tests per 100,000"
+                        "title": "Daily test rate (per 100,000)"
                     },
                     {
                         "field": "percentpositivity_7day",
@@ -323,7 +323,7 @@ var vegaDotSpec = {
                     {
                         "field": "median_daily_test_rate",
                         "type": "quantitative",
-                        "title": "Daily tests per 100,000"
+                        "title": "Daily test rate (per 100,000)"
                     },
                     {
                         "field": "percentpositivity_7day",
@@ -481,7 +481,7 @@ var tickSpec = {
                 },
                 "tooltip": [
                     { "field": "modzcta", "title": "ZIP" },
-                    { "field": "median_daily_test_rate", "type": "quantitative", "title": "Daily test rate" }
+                    { "field": "median_daily_test_rate", "type": "quantitative", "title": "Daily test rate (per 100,000)" }
                 ]
             }
         },
@@ -915,7 +915,7 @@ function changeMap(x) {
 
     if (x === 1) {
         vegaSpec.layer[1].encoding.color.field = 'median_daily_test_rate';
-        vegaSpec.layer[1].encoding.color.legend.title = 'Median daily test rate (per 100,000)';
+        vegaSpec.layer[1].encoding.color.legend.title = 'Daily test rate (per 100,000)';
         vegaSpec.layer[1].encoding.color.scale.scheme.name = "goldgreen";
         document.getElementById('mb1').setAttribute('aria-label', 'Tab selected');
         vegaEmbed('#map', vegaSpec);
