@@ -434,7 +434,85 @@ d3.csv("https://raw.githubusercontent.com/nychealth/coronavirus-data/master/late
 //End min/max/median work.
 
 
+// Default tick-distribution plot spec
+var tickSpec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "description": "Tick chart",
+    "width": "container",
+    "height": 40,
+    "config": {
+        "background": "#FFFFFF",
+        "axisX": {
+            "domain": false,
+            "labels": true,
+            "grid": false,
+            "labelFontSize": 8,
+            "tickColor": "#000000",
+            "tickSize": 0,
+            "titleFontSize": 12
+        },
+        "axisY": {
+            "domain": false,
+            "labels": false,
+            "grid": false,
+            "ticks": false
+        },
+        "view": { "stroke": "transparent" },
+        "tick": { "thickness": 1, "bandSize": 30 }
+    },
 
+    "data": {
+        "url": "https://raw.githubusercontent.com/nychealth/coronavirus-data/master/latest/last7days-by-modzcta.csv"
+    },
+
+    "layer": [
+        {
+            "mark": {
+                "type": "tick",
+                "tooltip": true,
+                "color": "darkgrey"
+            },
+            "encoding": {
+                "x": {
+                    "field": "median_daily_test_rate",
+                    "type": "quantitative",
+
+                    "title": null
+                },
+                "tooltip": [
+                    { "field": "modzcta", "title": "ZIP" },
+                    { "field": "median_daily_test_rate", "type": "quantitative", "title": "Daily test rate" }
+                ]
+            }
+        },
+
+
+        {
+            "mark": {
+                "type": "tick",
+                "thickness": 3,
+                "tooltip": true,
+                "color": "hotpink"
+            },
+            "transform": [
+                { "filter": "datum.modzcta == 11226" }
+            ],
+            "encoding": {
+                "x": {
+                    "field": "median_daily_test_rate",
+                    "type": "quantitative",
+
+                    "title": null
+                },
+                "tooltip": [
+                    { "field": "modzcta", "title": "ZIP" },
+                    { "field": "median_daily_test_rate", "type": "quantitative", "title": "Daily test rate positive" }
+                ]
+            }
+        }
+
+    ]
+}
 
 
 
@@ -797,11 +875,18 @@ function changeNeighborhood(zipCode) {
     showMap(vegaSpec);
 
 
+    // Updates the distribution plot based on neighborhood
+    tickSpec.layer[1].transform[0].filter = "datum.modzcta == " + zipCode;
+    console.log("filter = " + tickSpec.layer[1].transform[0].filter)
+
+
+    //Draws the distribution plot
+    vegaEmbed("#ticks", tickSpec);
+
+
 
     // Filtering the map data
     mapZipData = mapData.filter(neighborhood => neighborhood.modzcta == zipString);
-    console.log('zip map data:');
-    console.log(mapZipData);
 
     document.getElementById('daterange').innerHTML = mapZipData[0].daterange;
 
@@ -811,14 +896,7 @@ function changeNeighborhood(zipCode) {
     document.getElementById('zrv').innerHTML = mapZipData[0].median_daily_test_rate;
     document.getElementById('zrmv').innerHTML = mdtrMedian;
 
-    document.getElementById('zrv').style.marginRight = 100 * (maxMDTR.median_daily_test_rate - mapZipData[0].median_daily_test_rate) / (maxMDTR.median_daily_test_rate - minMDTR.median_daily_test_rate) + "%";
-
-    document.getElementById('zrm').style.marginRight = 100 * (maxMDTR.median_daily_test_rate - mdtrMedian) / (maxMDTR.median_daily_test_rate - minMDTR.median_daily_test_rate) + "%";
-
-    console.log("median margin: " + 100 * (maxMDTR.median_daily_test_rate - mdtrMedian) / (maxMDTR.median_daily_test_rate - minMDTR.median_daily_test_rate) + "%");
-
     changeMap(1);
-
 
 };
 
@@ -843,6 +921,15 @@ function changeMap(x) {
         vegaEmbed('#map', vegaSpec);
         document.getElementById('mapmetric').innerHTML = "Daily test rate, per 100,000 people";
 
+        tickSpec.layer[0].encoding.x.field = 'median_daily_test_rate';
+        tickSpec.layer[0].encoding.tooltip[1].field = 'median_daily_test_rate';
+        tickSpec.layer[0].encoding.tooltip[1].title = 'Daily test rate';
+        tickSpec.layer[1].encoding.x.field = 'median_daily_test_rate';
+        tickSpec.layer[1].encoding.tooltip[1].field = 'median_daily_test_rate';
+        tickSpec.layer[1].encoding.tooltip[1].title = 'Daily test rate';
+        console.log(tickSpec)
+        vegaEmbed('#ticks', tickSpec);
+
 
         rangeLo = minMDTR.median_daily_test_rate;
         rangeHi = maxMDTR.median_daily_test_rate;
@@ -853,6 +940,15 @@ function changeMap(x) {
         rangeMed = mdtrMedian
         medMargin = 100 * (maxMDTR.median_daily_test_rate - mdtrMedian) / (maxMDTR.median_daily_test_rate - minMDTR.median_daily_test_rate);
 
+        if (rangeZip > rangeMed) {
+            document.getElementById('medcomp').innerHTML = "&nbsp;higher&nbsp;"
+        } else if (rangeZip < rangeMed) {
+            document.getElementById('medcomp').innerHTML = "&nbsp;lower&nbsp;"
+        } else if (rangeZip === rangeMed) {
+            document.getElementById('medcomp').innerHTML = "&nbsp;equal to&nbsp;"
+        }
+
+
     }
 
 
@@ -862,6 +958,17 @@ function changeMap(x) {
         vegaSpec.layer[1].encoding.color.scale.scheme.name = "orangered";
         vegaEmbed('#map', vegaSpec);
         document.getElementById('mapmetric').innerHTML = "Percent positive";
+
+        tickSpec.layer[0].encoding.x.field = 'percentpositivity_7day';
+        tickSpec.layer[0].encoding.tooltip[1].field = 'percentpositivity_7day';
+        tickSpec.layer[0].encoding.tooltip[1].title = 'Percent Positive';
+        tickSpec.layer[1].encoding.x.field = 'percentpositivity_7day';
+        tickSpec.layer[1].encoding.tooltip[1].field = 'percentpositivity_7day';
+        tickSpec.layer[1].encoding.tooltip[1].title = 'Percent Positive';
+
+
+        vegaEmbed('#ticks', tickSpec);
+
         rangeLo = minPP.percentpositivity_7day;
         rangeHi = maxPP.percentpositivity_7day;
         rangeZip = mapZipData[0].percentpositivity_7day
@@ -869,6 +976,15 @@ function changeMap(x) {
 
         zipMargin = 100 * (maxPP.percentpositivity_7day - mapZipData[0].percentpositivity_7day) / (maxPP.percentpositivity_7day - minPP.percentpositivity_7day);
         medMargin = 100 * (maxPP.percentpositivity_7day - ppMedian) / (maxPP.percentpositivity_7day - minPP.percentpositivity_7day);
+
+        if (rangeZip > rangeMed) {
+            document.getElementById('medcomp').innerHTML = "&nbsp;higher&nbsp;"
+        } else if (rangeZip < rangeMed) {
+            document.getElementById('medcomp').innerHTML = "&nbsp;lower&nbsp;"
+        } else if (rangeZip === rangeMed) {
+            document.getElementById('medcomp').innerHTML = "&nbsp;equal to&nbsp;"
+        }
+
 
     }
 
@@ -879,21 +995,39 @@ function changeMap(x) {
         rangeLo = minPeople.people_positive;
         rangeHi = maxPeople.people_positive;
 
+        tickSpec.layer[0].encoding.x.field = 'people_positive';
+        tickSpec.layer[0].encoding.tooltip[1].field = 'people_positive';
+        tickSpec.layer[0].encoding.tooltip[1].title = 'New people positive';
+        tickSpec.layer[1].encoding.x.field = 'people_positive';
+        tickSpec.layer[1].encoding.tooltip[1].field = 'people_positive';
+        tickSpec.layer[1].encoding.tooltip[1].title = 'New people positive';
+
+        vegaEmbed('#ticks', tickSpec);
+
         rangeZip = mapZipData[0].people_positive;
         rangeMed = numMedian;
 
         zipMargin = 100 * (maxPeople.people_positive - mapZipData[0].people_positive) / (maxPeople.people_positive - minPeople.people_positive);
         medMargin = 100 * (maxPeople.people_positive - numMedian) / (maxPeople.people_positive - minPeople.people_positive);
 
+        if (rangeZip > rangeMed) {
+            document.getElementById('medcomp').innerHTML = "&nbsp;higher&nbsp;"
+        } else if (rangeZip < rangeMed) {
+            document.getElementById('medcomp').innerHTML = "&nbsp;lower&nbsp;"
+        } else if (rangeZip === rangeMed) {
+            document.getElementById('medcomp').innerHTML = "&nbsp;equal to&nbsp;"
+        }
+
     };
+
+
 
     // Update range chart
     document.getElementById('lozip').innerHTML = rangeLo;
     document.getElementById('hizip').innerHTML = rangeHi;
     document.getElementById('zrv').innerHTML = rangeZip;
     document.getElementById('zrmv').innerHTML = rangeMed;
-    document.getElementById('zrv').style.marginRight = zipMargin + "%";
-    document.getElementById('zrm').style.marginRight = medMargin + "%";
+
 
 
 
