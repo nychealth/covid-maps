@@ -919,7 +919,7 @@ function changeMap(x) {
         vegaSpec.layer[1].encoding.color.scale.scheme.name = "goldgreen";
         document.getElementById('mb1').setAttribute('aria-label', 'Tab selected');
         vegaEmbed('#map', vegaSpec);
-        document.getElementById('mapmetric').innerHTML = "Daily test rate, per 100,000 people";
+        document.getElementById('metrictext').innerHTML = "people tested per 100,000";
 
         tickSpec.layer[0].encoding.x.field = 'median_daily_test_rate';
         tickSpec.layer[0].encoding.tooltip[1].field = 'median_daily_test_rate';
@@ -957,7 +957,7 @@ function changeMap(x) {
         vegaSpec.layer[1].encoding.color.legend.title = 'Percent Positive';
         vegaSpec.layer[1].encoding.color.scale.scheme.name = "orangered";
         vegaEmbed('#map', vegaSpec);
-        document.getElementById('mapmetric').innerHTML = "Percent positive";
+        document.getElementById('metrictext').innerHTML = "%";
 
         tickSpec.layer[0].encoding.x.field = 'percentpositivity_7day';
         tickSpec.layer[0].encoding.tooltip[1].field = 'percentpositivity_7day';
@@ -991,7 +991,7 @@ function changeMap(x) {
 
     else if (x === 3) {
         showMap(vegaDotSpec);
-        document.getElementById('mapmetric').innerHTML = "New people positive";
+        document.getElementById('metrictext').innerHTML = "people";
         rangeLo = minPeople.people_positive;
         rangeHi = maxPeople.people_positive;
 

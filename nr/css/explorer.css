@@ -3,6 +3,10 @@ a:not([href]):not([tabindex]) {
     text-decoration: none;
 }
 
+#bracket.table td, th {
+  line-height: 24px;
+}
+
 h3 {
   margin-bottom: 20px;
 }
@@ -152,6 +156,7 @@ a:link {
   margin: 0;
   padding: 5px 5px;
   font-size: 12px;
+  height: 100%;
 }
 
 #lowblock {
