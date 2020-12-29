@@ -443,12 +443,12 @@ var tickSpec = {
     "config": {
         "background": "#FFFFFF",
         "axisX": {
-            "domain": false,
+            "domain": true,
             "labels": true,
             "grid": false,
             "labelFontSize": 8,
             "tickColor": "#000000",
-            "tickSize": 0,
+            "tickSize": 2,
             "titleFontSize": 12
         },
         "axisY": {
