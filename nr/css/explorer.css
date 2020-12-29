@@ -355,3 +355,44 @@ left: -9999px;
  .h2sm {
    font-size: 20px;
  }
+
+
+                                     /* Start - classes for the topline data page buttons*/
+                                    .xbutton {
+                                        display: inline-block;
+                                        padding: 10px 5px;
+                                        font-family: helvetica;
+                                        text-decoration: none;
+                                        margin-bottom: 30px;
+                                    }
+
+                                    .xbutton-milestone {
+                                        background-color: #ffffff;
+                                        border-bottom: 5px solid #a8a8a8;
+                                        color: #006f93;
+                                    }
+
+                                    .xbutton-milestone:hover {
+                                        background-color: #dcdcdc;
+                                    }
+
+                                    .xbutton-active {
+                                        background-color: #ccb1d1;
+                                        color: #161616 !important;
+                                        font-weight: bold;
+                                        border-bottom: 5px solid #803D8D;
+                                    }
+
+                                    .xbutton-active:hover {
+                                        background-color: #c2a1c8;
+                                    }
+
+                                    .xbutton-inactive {
+                                        background-color: #f9f9f9;
+                                        border-bottom: 5px solid #6e6e6e;
+                                        color: #006f93;
+                                    }
+
+                                    .xbutton-inactive:hover {
+                                        background-color: #dcdcdc;
+                                    }
