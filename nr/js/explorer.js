@@ -200,7 +200,7 @@ var vegaSpec =
                     {
                         "field": "people_positive",
                         "type": "quantitative",
-                        "title": "New people positive (reported so far)"
+                        "title": "New cases (reported so far)"
                     },
 
                     {
@@ -294,7 +294,7 @@ var vegaDotSpec = {
                         ]
                     },
                     "legend": {
-                        "title": `New people positive (reported so far)`,
+                        "title": `New cases (reported so far)`,
                         "titleFontSize": 10,
                         "orient": "top-left",
                         "symbolLimit": 5,
@@ -685,6 +685,11 @@ function changeMetric(y) {
     for (let button of document.querySelectorAll('.chartbutton')) button.classList.remove('highlight');
     btn.classList.add('highlight');
 
+    //Removes aria-label from everything based on class
+    for (let atr of document.querySelectorAll('.togglebutton')) atr.removeAttribute("aria-label", "Tab selected");
+    //Adds aria-label to selected button
+    btn.setAttribute("aria-label", "Tab selected");
+
     if (y === 2) {
         metric = "PCTPOS";
         document.getElementById('datalabel').innerHTML = "Percent of people tested who tested positive";
@@ -910,6 +915,11 @@ function changeMap(x) {
     for (let button of document.querySelectorAll('.mapbutton')) button.classList.remove('highlight');
     btn.classList.add('highlight');
 
+    //Removes aria-label from everything based on class
+    for (let atr of document.querySelectorAll('.togglebutton')) atr.removeAttribute("aria-label", "Tab selected");
+    //Adds aria-label to selected button
+    btn.setAttribute("aria-label", "Tab selected");
+
     if (x === 1) {
         vegaSpec.layer[1].encoding.color.field = 'median_daily_test_rate';
         vegaSpec.layer[1].encoding.color.legend.title = 'Daily test rate (per 100,000)';
@@ -948,7 +958,10 @@ function changeMap(x) {
             document.getElementById('medcomp').classList.remove("data-in");
         } else if (rangeZip === rangeMed) {
             document.getElementById('medcomp').innerHTML = "&nbsp;equal to&nbsp;"
-        }
+        };
+        document.getElementById('ifpp').innerHTML = '';
+        document.getElementById('ifpp1').innerHTML = '';
+        document.getElementById('ifpp2').innerHTML = '';
 
 
     }
@@ -989,7 +1002,10 @@ function changeMap(x) {
             document.getElementById('medcomp').classList.remove("data-in");
         } else if (rangeZip === rangeMed) {
             document.getElementById('medcomp').innerHTML = "&nbsp;equal to&nbsp;"
-        }
+        };
+        document.getElementById('ifpp').innerHTML = '%';
+        document.getElementById('ifpp1').innerHTML = '%';
+        document.getElementById('ifpp2').innerHTML = '%';
 
 
     }
@@ -1003,10 +1019,10 @@ function changeMap(x) {
 
         tickSpec.layer[0].encoding.x.field = 'people_positive';
         tickSpec.layer[0].encoding.tooltip[1].field = 'people_positive';
-        tickSpec.layer[0].encoding.tooltip[1].title = 'New people positive';
+        tickSpec.layer[0].encoding.tooltip[1].title = 'New cases';
         tickSpec.layer[1].encoding.x.field = 'people_positive';
         tickSpec.layer[1].encoding.tooltip[1].field = 'people_positive';
-        tickSpec.layer[1].encoding.tooltip[1].title = 'New people positive';
+        tickSpec.layer[1].encoding.tooltip[1].title = 'New cases';
 
         vegaEmbed('#ticks', tickSpec);
 
@@ -1027,6 +1043,9 @@ function changeMap(x) {
             document.getElementById('medcomp').classList.remove("lower");
             document.getElementById('medcomp').classList.remove("data-in");
         };
+        document.getElementById('ifpp').innerHTML = '';
+        document.getElementById('ifpp1').innerHTML = '';
+        document.getElementById('ifpp2').innerHTML = '';
 
     };
 

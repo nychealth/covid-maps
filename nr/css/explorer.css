@@ -57,7 +57,7 @@ h3 {
 }
 
 .highlight {
-  background-color: #429ddd!important;
+  background-color: #275e84!important;
   color: #ffffff!important;
   font-weight: 600!important;
 }
@@ -152,7 +152,7 @@ a:link {
 
 .bloks {
   display: inline-block;
-  background: #f6f6f6;
+  background: #fcfcfc;
   margin: 0;
   padding: 5px 5px;
   font-size: 12px;
@@ -282,9 +282,11 @@ main {
   display: inline-block;
   font-size: 13px;
   width: 100%;
+  /*
   border-left: 5px solid #bfbfbf;
+  */
   padding-left: 5px;
-  background-color: #f2f2f2;
+  background-color: #f7f7f7;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -342,3 +344,10 @@ table th {
   line-height: 38px;
 }
 
+
+/* use this class to position elements off-screen so that only screen readers encounter them*/
+.sronly {
+position: absolute;
+left: -9999px;
+}
+ /* use aria-hidden="true" for visual-only (non-screen reader) elements */
