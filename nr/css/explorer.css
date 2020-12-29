@@ -351,3 +351,7 @@ position: absolute;
 left: -9999px;
 }
  /* use aria-hidden="true" for visual-only (non-screen reader) elements */
+
+ .h2sm {
+   font-size: 20px;
+ }
