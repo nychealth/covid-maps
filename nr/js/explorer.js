@@ -158,9 +158,9 @@ var vegaSpec =
                     "type": "quantitative",
                     "scale": {
                         "scheme": {
-                            "name": "goldgreen",
+                            "name": "yellowgreen",
                             "extent": [
-                                0.1,
+                                0.01,
                                 1.5
                             ]
                         }
@@ -458,7 +458,7 @@ var tickSpec = {
             "ticks": false
         },
         "view": { "stroke": "transparent" },
-        "tick": { "thickness": 1, "bandSize": 30 }
+        "tick": { "thickness": 0.65, "bandSize": 40 }
     },
 
     "data": {
@@ -490,9 +490,9 @@ var tickSpec = {
         {
             "mark": {
                 "type": "tick",
-                "thickness": 3,
+                "thickness": 4,
                 "tooltip": true,
-                "color": "hotpink"
+                "color": "#DB00A8"
             },
             "transform": [
                 { "filter": "datum.modzcta == 11226" }
@@ -810,7 +810,7 @@ function changeNeighborhood(zipCode) {
     //Higher/Lower assignments
 
     // Case rate, ZIP to Boro:
-    if (zipCodeData[0].COVID_CASE_RATE > boroData[0].CASE_RATE) {
+    if (Number(zipCodeData[0].COVID_CASE_RATE) > Number(boroData[0].CASE_RATE)) {
         document.getElementById('hilo1').innerHTML = "&nbsp;Higher&nbsp;";
         document.getElementById('hilo1').classList.add('higher');
         document.getElementById('hilo1').classList.remove('lower');
@@ -830,7 +830,7 @@ function changeNeighborhood(zipCode) {
 
 
     //Case rate, ZIp to City
-    if (zipCodeData[0].COVID_CASE_RATE > cityTableData[0].CASE_RATE) {
+    if (Number(zipCodeData[0].COVID_CASE_RATE) > Number(cityTableData[0].CASE_RATE)) {
         document.getElementById('hilo2').innerHTML = "&nbsp;Higher&nbsp;";
         document.getElementById('hilo2').classList.add('higher');
         document.getElementById('hilo2').classList.remove('lower');
@@ -842,8 +842,12 @@ function changeNeighborhood(zipCode) {
 
     }
 
+    console.log("test:");
+    console.log(typeof zipCodeData[0].COVID_DEATH_RATE)
+    console.log(typeof cityTableData[0].DEATH_RATE)
+
     // Death rate, ZIP to boro
-    if (zipCodeData[0].COVID_DEATH_RATE > boroData[0].DEATH_RATE) {
+    if (Number(zipCodeData[0].COVID_DEATH_RATE) > Number(boroData[0].DEATH_RATE)) {
         document.getElementById('hilo3').innerHTML = "&nbsp;Higher&nbsp;"
         document.getElementById('hilo3').classList.add('higher');
         document.getElementById('hilo3').classList.remove('lower');
@@ -855,7 +859,7 @@ function changeNeighborhood(zipCode) {
     }
 
     //Death rate, zip to city
-    if (zipCodeData[0].COVID_DEATH_RATE > cityTableData[0].DEATH_RATE) {
+    if (Number(zipCodeData[0].COVID_DEATH_RATE) > Number(cityTableData[0].DEATH_RATE)) {
         document.getElementById('hilo4').innerHTML = "&nbsp;Higher&nbsp;";
         document.getElementById('hilo4').classList.add('higher');
         document.getElementById('hilo4').classList.remove('lower');
@@ -923,7 +927,7 @@ function changeMap(x) {
     if (x === 1) {
         vegaSpec.layer[1].encoding.color.field = 'median_daily_test_rate';
         vegaSpec.layer[1].encoding.color.legend.title = 'Daily test rate (per 100,000)';
-        vegaSpec.layer[1].encoding.color.scale.scheme.name = "goldgreen";
+        vegaSpec.layer[1].encoding.color.scale.scheme.name = "yellowgreen";
         document.getElementById('mb1').setAttribute('aria-label', 'Tab selected');
         vegaEmbed('#map', vegaSpec);
         document.getElementById('metrictext').innerHTML = "people tested per 100,000";
