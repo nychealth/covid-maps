@@ -12,44 +12,39 @@ var geoObj = {};
 var covidObj = {};
 var viewObj = {};
 var ppSpec = "mapPP.vl.json";
+var trSpec = "mapDTR.vl.json";
 var radios = [];
 var opt = {
   "renderer": "svg"
 };
 var el = document.getElementById('#map'); // this code listens to the form with map chooser; must run after DOM loads
 
-//commenting our radio button listener/changer
-/*
+
 window.onload = listenRadios;
 
 function listenRadios() {
   radios = document.querySelectorAll('input[type=radio][name="mapRadioGroup"]');
   radios.forEach(function (radio) {
     return radio.addEventListener('change', function () {
-      if (radio.value === 'Case Rate') {
-        rateMapCreate();
-      } else if (radio.value === 'Case Count') {
-        countMapCreate();
-      } else if (radio.value === 'Death Count') {
-        deathCountMapCreate();
-      } else if (radio.value === 'Death Rate') {
-        deathRateMapCreate();
+      if (radio.value === 'Perpos') {
+        mapCreate(ppSpec);
       } else {
-        percentMapCreate();
-      } // for if chosenField is Percent Positive
+        mapCreate(trSpec);
+      }
 
 
       ;
     });
   });
 } //this function creates the map
-*/
 
 
-function ppMapCreate() {
-  vegaEmbed('#map', ppSpec, opt).then(function (result) {
+
+function mapCreate(spec) {
+  vegaEmbed('#map', spec, opt).then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     viewObj = result.view;
   }).catch(console.error);
 }
-ppMapCreate();
+
+mapCreate(ppSpec);
