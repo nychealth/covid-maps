@@ -945,9 +945,9 @@ function changeMap(x) {
         rangeHi = maxMDTR.median_daily_test_rate;
 
         zipMargin = 100 * (maxMDTR.median_daily_test_rate - mapZipData[0].median_daily_test_rate) / (maxMDTR.median_daily_test_rate - minMDTR.median_daily_test_rate);
-        rangeZip = mapZipData[0].median_daily_test_rate;
+        rangeZip = Number(mapZipData[0].median_daily_test_rate);
 
-        rangeMed = mdtrMedian
+        rangeMed = Number(mdtrMedian);
         medMargin = 100 * (maxMDTR.median_daily_test_rate - mdtrMedian) / (maxMDTR.median_daily_test_rate - minMDTR.median_daily_test_rate);
 
         if (rangeZip > rangeMed) {
@@ -988,8 +988,8 @@ function changeMap(x) {
 
         rangeLo = minPP.percentpositivity_7day;
         rangeHi = maxPP.percentpositivity_7day;
-        rangeZip = mapZipData[0].percentpositivity_7day
-        rangeMed = ppMedian;
+        rangeZip = Number(mapZipData[0].percentpositivity_7day);
+        rangeMed = Number(ppMedian);
 
         zipMargin = 100 * (maxPP.percentpositivity_7day - mapZipData[0].percentpositivity_7day) / (maxPP.percentpositivity_7day - minPP.percentpositivity_7day);
         medMargin = 100 * (maxPP.percentpositivity_7day - ppMedian) / (maxPP.percentpositivity_7day - minPP.percentpositivity_7day);
