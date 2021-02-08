@@ -10,15 +10,92 @@
 
 <body>
 
-    <!--circle.html now has all 5, with circles for case and death counts-->
+
+    <link rel="stylesheet" href="https://nychealth.github.io/covid-maps/pageassets/datapages.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 20px;
+            color: #333;
+            background-color: #fff;
+        }
+    </style>
 
     <div style="max-width:800px; margin:auto">
-        <iframe title="Why isn't my ZIP Code in your data?" aria-label="Map" id="datawrapper-chart-XxDa1"
-            src="https://datawrapper.dwcdn.net/XxDa1/5/" scrolling="no" frameborder="0"
-            style="width: 0; min-width: 100% !important; border: none;" height="858"></iframe>
-        <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
-        </script>
+
+        <h1>Why isn't my ZIP Code in your data?</h1>
+        <p>ZIP Codes don't represent areas - they represent mail delivery routes. To
+            represent the
+            area that the route is in, <strong>ZIP Code Tabulation Areas</strong> (ZCTA) are used. Some ZIP Codes,
+            like those
+            for a single building, are bundled into their surrounding ZCTA.</p>
+        <p>
+            <strong>Modified ZCTA</strong> (modzcta) is a geography used to analyze health data. ZCTAs with small
+            populations
+            are combined with a neighboring ZCTA. That allows for more stable rate calculations by increasing the
+            underlying
+            population of smaller areas.
+        </p>
+        <p>If your ZIP Code isn't in the COVID-19 data, use this map or table to see what <em>modzcta</em> it is in.
+        </p>
+        <ul>
+            <li><a href="https://www1.nyc.gov/site/doh/covid/covid-19-data.page">Return to the NYC COVID-19 Data
+                    Page</a></li>
+            <li><a href="https://github.com/nychealth/coronavirus-data/tree/master/Geography-resources">Modzcta
+                    geography resources</a></li>
+        </ul>
+
+        <div class="choice">
+            <a id="map" onclick="umap()" tabindex="0" class="togglebutton highlight" aria-label="Tab selected">Map</a>
+
+            <a id="table" onclick="utable()" tabindex="0" class="togglebutton"><span class="sronly">View as
+                    accessible
+                </span>Table</a>
+        </div>
+
+        <div id="showmap" style="display:block;">
+            <iframe title="Why isn't my ZIP Code in your data?" aria-label="Map" id="datawrapper-chart-XxDa1"
+                src="https://datawrapper.dwcdn.net/XxDa1/5/" scrolling="no" frameborder="0"
+                style="width: 0; min-width: 100% !important; border: none;" height="858"></iframe>
+            <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
+            </script>
+
+        </div>
+
+        <div id="showtable" style="display:none;">
+            <iframe title="MODZCTA lookup table" aria-label="chart" id="datawrapper-chart-1J7AD"
+                src="https://datawrapper.dwcdn.net/1J7AD/2/" scrolling="no" frameborder="0"
+                style="width: 0; min-width: 100% !important; border: none;" height="943"></iframe>
+            <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
+            </script>
+
+        </div>
+
+
+
     </div>
+
+    <script>
+        function umap() {
+            document.getElementById('showmap').style.display = "block";
+            document.getElementById('showtable').style.display = "none";
+            document.getElementById('map').classList.add('highlight');
+            document.getElementById('table').classList.remove('highlight');
+            document.getElementById('map').setAttribute('aria-label', "Tab selected");
+            documemnt.getElementById('table').removeAttribute('aria-label');
+        }
+
+        function utable() {
+            document.getElementById('showtable').style.display = "block";
+            document.getElementById('showmap').style.display = "none";
+            document.getElementById('table').classList.add('highlight');
+            document.getElementById('map').classList.remove('highlight');
+            document.getElementById('table').setAttribute('aria-label', "Tab selected");
+            documemnt.getElementById('map').removeAttribute('aria-label');
+        }
+    </script>
 
 </body>
 
