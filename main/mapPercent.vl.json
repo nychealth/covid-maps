@@ -70,7 +70,7 @@
             }
           },
           "legend": {
-            "title": "Percent positive tests",
+            "title": "Percent positive",
             "titleFontSize": 10,
             "orient": "top-left",
             "gradientLength": 100
