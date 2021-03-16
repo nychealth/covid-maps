@@ -3,7 +3,7 @@ This folder describes ways to improve the accessibility of the NYC DOHMH's COVID
 - Hiding visualizations from screen readers using the `aria-hidden="true"` attribute 
 - Offering data tables (which are more accessible, though not perfect) in parallel to the visualizations, but hidden from sighted users with a screen-reader-only class that positions them off screen.
 
-The page in this repository offers an example of these techniques. 
+[The page in this repository](https://nychealth.github.io/covid-maps/accessibility/index.html) offers an example of these techniques. 
 
 
 
