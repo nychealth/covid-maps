@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <!--Custom = CSS-->
+    <style>
+        html {
+            font-family: Helvetica, Arial, sans-serif
+        }
+
+        body {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    </style>
+    <link href="https://www1.nyc.gov/assets/doh/css/misc/expand-collapse.css" type="text/css" rel="stylesheet">
+</head>
+
+
+
+<body>
+    <div style="width:700px; margin:auto;">
+
+
+
+        <!--Start code copy from here-->
+        <!--Data page stylesheet-->
+        <link rel="stylesheet" href="https://nychealth.github.io/covid-maps/pageassets/datapages.css">
+
+
+
+
+
+
+
+        <h1 id="top">Improving accessibility of data visuailzation</h1>
+
+        <div class="alertbox">
+            <p>This page demonstrates techniques for improving the accessibility of data visualizations. It is for
+                demonstration purposes only. <a href="https://www1.nyc.gov/site/doh/covid/covid-19-data.page">See full
+                    DOHMH COVID-19 Data webpages</a>.</p>
+        </div>
+
+
+
+
+        <H2 id="summary" style="margin-top:75px;">Summary Table</H2>
+        <p>Properly formatted tables, with labeled headers and rows, offer better access to users with screen readers
+            than charts or graphs do.
+        </p>
+
+        <iframe title="Live: Latest Data: Summary Table  and Milestone Link" aria-label="chart"
+            id="datawrapper-chart-hxf77" src="https://datawrapper.dwcdn.net/hxf77/4/" scrolling="no" frameborder="0"
+            style="width: 0; min-width: 100% !important; border: none;" height="491"></iframe>
+        <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
+        </script>
+
+
+
+
+
+
+        <h2 style="margin-top:75px;">Inaccessible Chart: Molecular Testing</h2>
+        <p>Visualizations can help sighted users make sense of the data, but charts are usually inaccessible to users
+            with screen readers. The screen reader does not have enough information to interpret the values it
+            encounters. It reads off a series of values without making clear what these values are.
+        </p>
+
+        <iframe title="Citywide percent positivity (last 3 months)" aria-label="Interactive line chart"
+            id="datawrapper-chart-K50rf" src="https://datawrapper.dwcdn.net/K50rf/16/" scrolling="no" frameborder="0"
+            style="width: 0; min-width: 100% !important; border: none;" height="400"></iframe>
+        <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
+        </script>
+
+        <h2 style="margin-top:75px">More accessible table version</h2>
+        <p>This table shows the same data as the chart above (actually, it also shows additional data in the source
+            file). The table reads the same source file as the chart.
+            It is formatted to offer better
+            access to a person using a screen reader. </p>
+        <p>It's limited by unlabelled buttons, but allows somebody using a screen reader to access the data.</p>
+
+        <iframe title="Testing and positivity, by day" aria-label="chart" id="datawrapper-chart-gLS2j"
+            src="https://datawrapper.dwcdn.net/gLS2j/1/" scrolling="no" frameborder="0"
+            style="width: 0; min-width: 100% !important; border: none;" height="592"></iframe>
+        <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
+        </script>
+
+
+        <h2 style="margin-top:50px;">Combining both experiences</h2>
+        <p>We can combine these experiences by using the <code>aria-hidden="true"</code>
+            attribute on visual-only elements. This attribute makes that element invisible to a screenreader.
+        </p>
+        <p>For content intended for screen readers, we use a CSS class
+            <code>.sronly {position: absolute; left: -9999px;}</code>. The screen reader encounters it as it reads
+            through the code, but it's
+            positioned off the screen, not visible to sighted users.
+        </p>
+        <p>By combining these techniques, we create a page of visualizations that offers more accessible data products
+            to different types of users.</p>
+
+
+
+
+
+        <h2 id="7day" style="margin-top:50px;">Map and Table: Testing Data by ZIP Code</h2>
+        <p>This map is best for a sighted audience. The table is another helpful way to explore the data. Clearly
+            labelling it as an accessible table, offers better access to users with visual impairments.</p>
+
+        <div class="choice">
+            <a id="ppmap" onclick="u14map()" tabindex="0" class="togglebutton highlight"
+                aria-label="Tab selected">Map</a>
+
+            <a id="pptable" onclick="u14table()" tabindex="0" class="togglebutton">Accessible
+                table</a>
+
+        </div>
+
+
+        <div id="if14map" style="display:block">
+            <iframe id="covidmap" title="COVID-19 map" aria-label="Map of recent percent positivity by ZIP."
+                src="https://nychealth.github.io/covid-maps/pp/ppt.html" scrolling="no" frameborder="0"
+                style="position: relative; width: 100vmin; height: 97vmin;"></iframe>
+            <div class="notetext">New people positive does not include people who previously
+                tested positive. All data are incomplete. Data will be backfilled as new
+                data
+                are reported.</div>
+            <a style="font-family: Helvetica; font-size: 11px; text-decoration: none; font-weight: 400; color: #08c; font-style: normal;"
+                href="https://github.com/nychealth/coronavirus-data/tree/master/latest#last7days-by-modzctacsv">About
+                the data for this map</a>.
+            <a style="font-family: Helvetica; font-size: 11px; text-decoration: none; font-weight: 400; color: #08c; font-style: normal;"
+                href="https://raw.githubusercontent.com/nychealth/coronavirus-data/master/latest/last7days-by-modzcta.csv">Get
+                the data</a>.
+        </div>
+
+
+
+        <div id="if14table" style="display:none">
+            <iframe title="7-day cumulative percent positivity table" aria-label="chart" id="datawrapper-chart-8UcZR"
+                src="https://datawrapper.dwcdn.net/8UcZR/11/" scrolling="no" frameborder="0"
+                style="width: 0; min-width: 100% !important; border: none;" height="631"></iframe>
+            <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
+            </script>
+
+            <span class="sronly">
+                <a href="https://github.com/nychealth/coronavirus-data/blob/master/latest/pp-by-modzcta.csv">Click
+                    here to download
+                    trend data on Github.</a>
+            </span>
+
+        </div>
+
+
+
+
+
+
+
+        <!--JAVASCRIPT SELECTION-->
+        <script>
+            //makes buttons keyboard accessible
+            document.addEventListener('keyup', function (event) {
+                // console.log(event);  
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    if (event.target.classList.contains('togglebutton')) {
+                        document.getElementById(event.target.id).click();
+                    }
+                }
+            });
+
+            //Thank you KL. 
+
+
+            //Resizing the map
+            function setCovidMapContainerHeight() {
+                // set variables for the two elements
+                var iframeContainer = document.querySelector('#covidmap');
+                var innerMapContainer = document.querySelector('#covidmap > html');
+
+                //get height value of innerMap
+                var mapRect = innerMapContainer.getBoundingClientRect();
+                var mapHeight = mapRect.height;
+                var mapHeightString = mapHeight.toString();
+                var styleHeight = mapHeightString + 'px';
+                //set height of iframe as map height
+                iframeContainer.style.height = styleHeight;
+            }
+
+            // set map height on initial load;
+            document.addEventListener('DOMContentLoaded', setCovidMapContainerHeight);
+            // add event handler on the window resize event, and attach map height function.
+            document.addEventListener('resize', setCovidMapContainerHeight);
+
+
+
+            //7-day map/table/trend
+            function u14map() {
+                document.getElementById('if14map').style.display = "block";
+                document.getElementById('if14table').style.display = "none";
+                document.getElementById('ppmap').classList.add("highlight");
+                document.getElementById('pptable').classList.remove("highlight");
+                document.getElementById('ppmap').setAttribute("aria-label", "Tab selected");
+                document.getElementById('pptable').removeAttribute("aria-label");
+            }
+
+            function u14table() {
+                document.getElementById('if14map').style.display = "none";
+                document.getElementById('if14table').style.display = "block";
+                document.getElementById('ppmap').classList.remove("highlight");
+                document.getElementById('pptable').classList.add("highlight");
+                document.getElementById('ppmap').removeAttribute("aria-label");
+                document.getElementById('pptable').setAttribute("aria-label", "Tab selected");
+            }
+
+
+
+
+        </script>
+
+
+
+        <!--end code copy from here-->
+
+
+
+
+
+
+        <script type="text/javascript" src="https://www1.nyc.gov/assets/doh/js/bootstrap/expand-collapse.js"></script>
+
+
+
+
+
+
+
+    </div>
+    <!--End body-width DIV-->
+
+
+</body>
+
+</html>

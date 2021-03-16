@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covid-19 Map: Cumulative data</title>
+
+  <!-- Import vega dependencies that are compatible with IE11-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.6.11/core.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.8.7/polyfill.js"></script>
+  <script src="https://vega.github.io/vega/assets/promise.min.js"></script>
+  <script src="https://vega.github.io/vega/assets/symbol.min.js"></script>
+  <script src="https://vega.github.io/vega/assets/fetch.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5/build-es5/vega.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4/build-es5/vega-lite.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6/build-es5/vega-embed.js"></script>
+
+
+  <link href="embed2.css" rel="stylesheet">
+  <style>
+    .background {
+      fill: transparent;
+      stroke: transparent !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--circle.html now has all 5, with circles for case and death counts-->
+
+  <div class="map-container center-me">
+    <form name="chooser">
+      <div class="map-chooser" id="mapRadio">
+        <input type="radio" id="rate" name="mapRadioGroup" value="1" checked>
+        <label for="rate">Case rate</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <input type="radio" id="deathrate" name="mapRadioGroup" value="2">
+        <label for="deathrate">Death rate</label>&nbsp;&nbsp;&nbsp;
+
+        <input type="radio" id="percent" name="mapRadioGroup" value="3">
+        <label for="percent">Percent positive</label>
+
+        <br>
+
+        <input type="radio" id="count" name="mapRadioGroup" value="4">
+        <label for="count">Case count</label>&nbsp;&nbsp;
+
+        <input type="radio" id="deathcount" name="mapRadioGroup" value="5">
+        <label for="deathcount">Death count</label> &nbsp;&nbsp;
+        <hr>
+
+      </div>
+    </form>
+
+    <div id="showCR" style="display:block;">
+      <iframe title="TOTAL Case rates map (LIVE connection)" aria-label="Map" id="datawrapper-chart-jvHPE"
+        src="https://datawrapper.dwcdn.net/jvHPE/5/" scrolling="no" frameborder="0"
+        style="width: 0; min-width: 100% !important; border: none;" height="612"></iframe>
+      <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
+      </script>
+    </div>
+
+    <div id="showDR" style="display:none;">
+      <iframe title="TOTAL Death rates map  (LIVE connection)" aria-label="Map" id="datawrapper-chart-mqA3Z"
+        src="https://datawrapper.dwcdn.net/mqA3Z/5/" scrolling="no" frameborder="0"
+        style="width: 0; min-width: 100% !important; border: none;" height="612"></iframe>
+      <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
+      </script>
+    </div>
+
+    <div id="showPP" style="display:none;">
+      <iframe title="TOTAL percent positivity map  (LIVE connection)" aria-label="Map" id="datawrapper-chart-LuzVF"
+        src="https://datawrapper.dwcdn.net/LuzVF/7/" scrolling="no" frameborder="0"
+        style="width: 0; min-width: 100% !important; border: none;" height="612"></iframe>
+      <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
+      </script>
+    </div>
+
+    <div id="showCC" style="display:none;">
+      <iframe title="total case count by modzcta" aria-label="Map" id="datawrapper-chart-5B7r5"
+        src="https://datawrapper.dwcdn.net/5B7r5/13/" scrolling="no" frameborder="0"
+        style="width: 0; min-width: 100% !important; border: none;" height="630"></iframe>
+      <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
+      </script>
+    </div>
+
+    <div id="showDC" style="display:none;">
+      <iframe title="total death count by modzcta " aria-label="Map" id="datawrapper-chart-uZDd6"
+        src="https://datawrapper.dwcdn.net/uZDd6/10/" scrolling="no" frameborder="0"
+        style="width: 0; min-width: 100% !important; border: none;" height="630"></iframe>
+      <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
+      </script>
+    </div>
+
+
+    <br>
+  </div>
+
+  </div>
+  <script>
+    window.onload = listenRadios;
+    cr = document.getElementById('showCR');
+    dr = document.getElementById('showDR');
+    pp = document.getElementById('showPP');
+    cc = document.getElementById('showCC');
+    dc = document.getElementById('showDC');
+
+
+
+    function listenRadios() {
+      radios = document.querySelectorAll('input[type=radio][name="mapRadioGroup"]');
+      radios.forEach(function (radio) {
+        return radio.addEventListener('change', function () {
+
+          console.log('go!')
+          cr.style.display = "none";
+          dr.style.display = "none";
+          pp.style.display = "none";
+          cc.style.display = "none";
+          dc.style.display = "none";
+
+          if (radio.value == 1) {
+            cr.style.display = "block";
+          } else if (radio.value == 2) {
+            dr.style.display = "block";
+          } else if (radio.value == 3) {
+            pp.style.display = "block";
+          } else if (radio.value == 4) {
+            cc.style.display = "block";
+          } else if (radio.value == 5) {
+            dc.style.display = "block";
+          } else {
+            cr.style.display = "block";
+          };
+
+
+
+        });
+      });
+    };
+
+
+
+
+  </script>
+
+</body>
+
+</html>

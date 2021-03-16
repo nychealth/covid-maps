@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Covid-19 Map: Antibody testing data</title>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+  <!-- Import vega-embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <link href="embed2.css" rel="stylesheet">
+  <style>
+    .background {
+      fill: transparent;
+      stroke: transparent !important;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="map-container center-me">
+    <form name="chooser">
+      <div class="map-chooser" id="mapRadio" style="font-size: .875rem; line-height: 2!important;">
+
+
+        <label for="testrate"><input type="radio" id="testrate" name="mapRadioGroup" value="1" checked>Test
+          rate</label>&nbsp;&nbsp;
+
+
+        <label for="totalpct"><input type="radio" id="totalpct" name="mapRadioGroup" value="2">Percent
+          positive</label>&nbsp;&nbsp;
+
+
+        <hr>
+
+
+
+
+
+      </div>
+    </form>
+
+    <div id="ifTR" style="display:block">
+      <iframe title="TOTAL Antibody test rates map  (LIVE connection)" aria-label="Map" id="datawrapper-chart-HeuNS"
+        src="https://datawrapper.dwcdn.net/HeuNS/6/" scrolling="no" frameborder="0"
+        style="width: 0; min-width: 100% !important; border: none;" height="612"></iframe>
+      <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
+      </script>
+    </div>
+
+    <div id="ifPP" style="display:none;">
+      <iframe title="TOTAL Antibody percent positive map  (LIVE connection)" aria-label="Map"
+        id="datawrapper-chart-VZzzp" src="https://datawrapper.dwcdn.net/VZzzp/8/" scrolling="no" frameborder="0"
+        style="width: 0; min-width: 100% !important; border: none;" height="612"></iframe>
+      <script type="text/javascript">!function () { "use strict"; window.addEventListener("message", (function (a) { if (void 0 !== a.data["datawrapper-height"]) for (var e in a.data["datawrapper-height"]) { var t = document.getElementById("datawrapper-chart-" + e) || document.querySelector("iframe[src*='" + e + "']"); t && (t.style.height = a.data["datawrapper-height"][e] + "px") } })) }();
+      </script>
+    </div>
+
+  </div>
+
+  </div>
+
+  <script>
+    window.onload = listenRadios;
+    tr = document.getElementById('ifTR');
+    pp = document.getElementById('ifPP');
+
+
+
+
+    function listenRadios() {
+      radios = document.querySelectorAll('input[type=radio][name="mapRadioGroup"]');
+      radios.forEach(function (radio) {
+        return radio.addEventListener('change', function () {
+
+          console.log('go!')
+          tr.style.display = "none";
+          pp.style.display = "none";
+
+          if (radio.value == 1) {
+            tr.style.display = "block";
+          } else if (radio.value == 2) {
+            pp.style.display = "block";
+          } else {
+            tr.style.display = "block";
+          };
+
+
+
+        });
+      });
+    };
+
+
+
+
+  </script>
+
+</body>
+
+</html>
