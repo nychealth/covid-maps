@@ -156,3 +156,97 @@
                 background: #803D8D;
                 color: #ffffff !important;
             }
+
+            .msbtn {
+                display: inline-block;
+                background-color: #f9f9f9;
+                text-decoration: none !important;
+                padding: 20px 15px;
+                margin-right: 10px;
+                margin: 10px 0px;
+                font-family: helvetica;
+                border: 0px;
+                cursor: pointer;
+                font-size: 16px;
+                width: 19%;
+            }
+
+            .msbtn-on {
+                background-color: #0a5796;
+                color: white;
+                font-style: bold;
+                text-decoration: none !important;
+            }
+
+            .msbtn:hover {
+                background-color: #dcdcdc;
+            }
+
+            .msbtn-on:hover {
+                background-color: #0a5796;
+            }
+
+            table, th, td {
+                text-align: left;
+                width: 100%;
+                padding: 7px;
+            }
+
+            #boroughstable {
+                padding: 0px!important;
+            }
+
+            #boroughstable th {
+                background-color: #fafafa;
+                font-size: 14px;
+                font-weight: normal;
+            }
+
+            #boroughstable td {
+                font-weight: bold;
+            }
+
+            .low {
+                background-color: #1D8AFF;
+                color: white;
+            }
+
+            .moderate {
+            background-color: #FFF70E;
+            color: black; 
+            }
+
+            .substantial {
+                background-color: #FF7134;
+                color: white;
+            }
+
+            .high {
+                background-color: #FF0000;
+                color: white;
+            }
+
+            .sm {
+                font-size: 12px;
+            }
+
+            #chartDest {
+                height: 300px;
+                width: 100%;
+                fill: transparent;
+                stroke: transparent !important;
+                }
+
+            .submissionButton {
+                width: 19%;
+                background-color: #c2c2c2;
+                color: black;
+                font-weight: bold;
+                height: 39px;
+                border: 0;
+                padding-top: -1px;
+            }
+
+            .vg-tooltip {
+                width: 200px!important;
+            }
