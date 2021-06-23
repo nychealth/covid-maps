@@ -540,7 +540,10 @@ function changeNeighborhood(zipCode) {
     document.getElementById('vxrate').innerHTML = zipVaxData[0].PERC_1PLUS + "%";
     document.getElementById('vnyc').innerHTML = boroVax[0].PERC_1PLUS + "%";
 
+
+
     // comparing vax rates to citywide
+    document.getElementById('vccomp').removeAttribute('class'); // first strip previous styles
     if (Number(zipVaxData[0].PERC_1PLUS) > Number(boroVax[0].PERC_1PLUS)) {
         document.getElementById('vccomp').innerHTML = "Higher";
         document.getElementById('vccomp').classList.add('lower');
@@ -608,6 +611,7 @@ function changeNeighborhood(zipCode) {
     //Higher/Lower assignments
 
     // Case rate, ZIP to Boro:
+    document.getElementById('hilo1').removeAttribute('class'); // first strip previous styles
     if (Number(zipCodeData[0].COVID_CASE_RATE) > Number(boroData[0].CASE_RATE)) {
         document.getElementById('hilo1').innerHTML = "&nbsp;Higher&nbsp;";
         document.getElementById('hilo1').classList.add('higher');
@@ -628,6 +632,7 @@ function changeNeighborhood(zipCode) {
 
 
     //Case rate, ZIp to City
+    document.getElementById('hilo2').removeAttribute('class'); // first strip previous styles
     if (Number(zipCodeData[0].COVID_CASE_RATE) > Number(cityTableData[0].CASE_RATE)) {
         document.getElementById('hilo2').innerHTML = "&nbsp;Higher&nbsp;";
         document.getElementById('hilo2').classList.add('higher');
@@ -643,6 +648,7 @@ function changeNeighborhood(zipCode) {
 
 
     // Death rate, ZIP to boro
+    document.getElementById('hilo3').removeAttribute('class'); // first strip previous styles
     if (Number(zipCodeData[0].COVID_DEATH_RATE) > Number(boroData[0].DEATH_RATE)) {
         document.getElementById('hilo3').innerHTML = "&nbsp;Higher&nbsp;"
         document.getElementById('hilo3').classList.add('higher');
@@ -654,6 +660,7 @@ function changeNeighborhood(zipCode) {
     }
 
     //Death rate, zip to city
+    document.getElementById('hilo4').removeAttribute('class'); // first strip previous styles
     if (Number(zipCodeData[0].COVID_DEATH_RATE) > Number(cityTableData[0].DEATH_RATE)) {
         document.getElementById('hilo4').innerHTML = "&nbsp;Higher&nbsp;";
         document.getElementById('hilo4').classList.add('higher');
@@ -667,6 +674,8 @@ function changeNeighborhood(zipCode) {
     } 
 
        // prints boro vax values to summary table
+       document.getElementById('vbcomp').removeAttribute('class'); // first strip previous styles
+
        if (parentBoro === "Bronx") { 
         document.getElementById('vboro').innerHTML = boroVax[1].PERC_1PLUS + "%";
         document.getElementById('boro3').innerHTML = "The Bronx";
@@ -737,7 +746,7 @@ function changeNeighborhood(zipCode) {
 
      uhfTransmission = mostRecent[uhfSelectId];
      uhfTransmission = Number(uhfTransmission);
-     document.getElementById('levelin').style.className = ''; 
+     document.getElementById('levelin').removeAttribute('class');
 
 
      if (uhfTransmission < 10) {
