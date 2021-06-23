@@ -766,7 +766,7 @@ function changeNeighborhood(zipCode) {
      document.getElementById('levelin').innerHTML = uhfLevel;
      document.getElementById('levelnumin').innerHTML = uhfTransmission;
 
-    //  document.getElementById('uhfin').innerHTML = uhfSelect[0].Zipcodes;
+    document.getElementById('uhfin').innerHTML = uhfSelect[0].Zipcodes;
      
 
 
