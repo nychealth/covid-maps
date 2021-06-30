@@ -689,36 +689,34 @@ function changeNeighborhood(zipCode) {
     }
   }
 
-  // // adds trandmission stuff
-  // uhfSelect = uhfList.filter((item) => item.Zipcodes.indexOf(zipCode) !== -1);
-  // uhfSelectId = "UHF" + uhfSelect[0].UHF_id;
-  // // now we have uhfSelectId that we can use to filter mostRecent
+  // adds trandmission stuff
+  uhfSelect = uhfList.filter((item) => item.Zipcodes.indexOf(zipCode) !== -1);
+  uhfSelectId = "UHF" + uhfSelect[0].UHF_id;
+  // now we have uhfSelectId that we can use to filter mostRecent
 
-  // uhfTransmission = mostRecent[uhfSelectId];
-  // uhfTransmission = Number(uhfTransmission);
-  // document.getElementById("levelin").removeAttribute("class");
+  uhfTransmission = mostRecent[uhfSelectId];
+  uhfTransmission = Number(uhfTransmission);
+  document.getElementById("levelin").removeAttribute("class");
 
-  // if (uhfTransmission < 10) {
-  //   uhfLevel = "Low";
-  //   document.getElementById("levelin").classList.add("low");
-  // } else if (uhfTransmission > 10 && uhfTransmission < 50) {
-  //   uhfLevel = "Moderate";
-  //   document.getElementById("levelin").classList.add("moderate");
-  // } else if (uhfTransmission > 50 && uhfTransmission < 100) {
-  //   uhfLevel = "Substantial";
-  //   document.getElementById("levelin").classList.add("substantial");
-  // } else if (uhfTransmission > 100) {
-  //   uhfLevel = "High";
-  //   document.getElementById("levelin").classList.add("high");
-  // } else {
-  // }
+  if (uhfTransmission < 10) {
+    uhfLevel = "Low";
+    document.getElementById("levelin").classList.add("low");
+  } else if (uhfTransmission > 10 && uhfTransmission < 50) {
+    uhfLevel = "Moderate";
+    document.getElementById("levelin").classList.add("moderate");
+  } else if (uhfTransmission > 50 && uhfTransmission < 100) {
+    uhfLevel = "Substantial";
+    document.getElementById("levelin").classList.add("substantial");
+  } else if (uhfTransmission > 100) {
+    uhfLevel = "High";
+    document.getElementById("levelin").classList.add("high");
+  } else {
+  }
 
-  // document.getElementById("levelin").innerHTML = uhfLevel;
-  // document.getElementById("levelnumin").innerHTML = uhfTransmission;
-  // document.getElementById("uhfin").innerHTML = uhfSelect[0].Zipcodes;
+  document.getElementById("levelin").innerHTML = uhfLevel;
+  document.getElementById("levelnumin").innerHTML = uhfTransmission;
 
-
-
+  document.getElementById("uhfin").innerHTML = uhfSelect[0].Zipcodes;
 
   // Draws the chart based on the ZIP!
   chartDraw(zipString, metric);
