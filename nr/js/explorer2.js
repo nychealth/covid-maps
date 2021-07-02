@@ -436,7 +436,7 @@ function changeMetric(y) {
   } else {
     metric = "TESTRATE";
     document.getElementById("datalabel").innerHTML =
-      "Test rate (per 100,000 people; PCR tests)";
+      "Molecular test rate (per 100,000 people)";
   }
 
   chartDraw(zipString, metric);
