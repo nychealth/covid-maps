@@ -510,10 +510,10 @@ function changeNeighborhood(zipCode) {
   // comparing vax rates to citywide
   document.getElementById("vccomp").removeAttribute("class"); // first strip previous styles
   if (Number(zipVaxData[0].PERC_1PLUS) > Number(boroVax[0].PERC_1PLUS)) {
-    document.getElementById("vccomp").innerHTML = "Higher";
+    document.getElementById("vccomp").innerHTML = "&nbsp;Higher&nbsp;";
     document.getElementById("vccomp").classList.add("lower");
   } else {
-    document.getElementById("vccomp").innerHTML = "Lower";
+    document.getElementById("vccomp").innerHTML = "&nbsp;Lower&nbsp;";
     document.getElementById("vccomp").classList.add("higher");
   }
 
@@ -637,10 +637,10 @@ function changeNeighborhood(zipCode) {
     document.getElementById("boro3").innerHTML = "The Bronx";
     // nested IF
     if (Number(zipVaxData[0].PERC_1PLUS) > Number(boroVax[1].PERC_1PLUS)) {
-      document.getElementById("vbcomp").innerHTML = "Higher";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Higher&nbsp;";
       document.getElementById("vbcomp").classList.add("lower");
     } else {
-      document.getElementById("vbcomp").innerHTML = "Lower";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Lower&nbsp;";
       document.getElementById("vbcomp").classList.add("higher");
     }
   } else if (parentBoro === "Brooklyn") {
@@ -648,10 +648,10 @@ function changeNeighborhood(zipCode) {
     document.getElementById("boro3").innerHTML = parentBoro;
     // nested IF
     if (Number(zipVaxData[0].PERC_1PLUS) > Number(boroVax[2].PERC_1PLUS)) {
-      document.getElementById("vbcomp").innerHTML = "Higher";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Higher&nbsp;";
       document.getElementById("vbcomp").classList.add("lower");
     } else {
-      document.getElementById("vbcomp").innerHTML = "Lower";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Lower&nbsp;";
       document.getElementById("vbcomp").classList.add("higher");
     }
   } else if (parentBoro === "Manhattan") {
@@ -659,10 +659,10 @@ function changeNeighborhood(zipCode) {
     document.getElementById("boro3").innerHTML = parentBoro;
     // nested IF
     if (Number(zipVaxData[0].PERC_1PLUS) > Number(boroVax[3].PERC_1PLUS)) {
-      document.getElementById("vbcomp").innerHTML = "Higher";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Higher&nbsp;";
       document.getElementById("vbcomp").classList.add("lower");
     } else {
-      document.getElementById("vbcomp").innerHTML = "Lower";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Lower&nbsp;";
       document.getElementById("vbcomp").classList.add("higher");
     }
   } else if (parentBoro === "Queens") {
@@ -670,10 +670,10 @@ function changeNeighborhood(zipCode) {
     document.getElementById("boro3").innerHTML = parentBoro;
     // nested IF
     if (Number(zipVaxData[0].PERC_1PLUS) > Number(boroVax[4].PERC_1PLUS)) {
-      document.getElementById("vbcomp").innerHTML = "Higher";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Higher&nbsp;";
       document.getElementById("vbcomp").classList.add("lower");
     } else {
-      document.getElementById("vbcomp").innerHTML = "Lower";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Lower&nbsp;";
       document.getElementById("vbcomp").classList.add("higher");
     }
   } else {
@@ -681,10 +681,10 @@ function changeNeighborhood(zipCode) {
     document.getElementById("boro3").innerHTML = "Staten Island";
     // nested IF
     if (Number(zipVaxData[0].PERC_1PLUS) > Number(boroVax[5].PERC_1PLUS)) {
-      document.getElementById("vbcomp").innerHTML = "Higher";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Higher&nbsp;";
       document.getElementById("vbcomp").classList.add("lower");
     } else {
-      document.getElementById("vbcomp").innerHTML = "Lower";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Lower&nbsp;";
       document.getElementById("vbcomp").classList.add("higher");
     }
   }
