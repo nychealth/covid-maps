@@ -194,10 +194,10 @@
 
             #boroughstable {
                 padding: 0px!important;
+                background-color: #fafafa;
             }
 
             #boroughstable th {
-                background-color: #fafafa;
                 font-size: 14px;
                 font-weight: normal;
             }
