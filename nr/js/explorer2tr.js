@@ -128,7 +128,7 @@ d3.csv(
   vaxFullyMax = getMax(vaxData, "PERC_FULLY");
 
   document.getElementById("lozip").innerHTML = vax1PlusMin.PERC_1PLUS;
-  document.getElementById("hizip").innerHTML = vax1PlusMax.PERC_1PLUS;
+  document.getElementById("hizip").innerHTML = '99.9';
 
   // Getting medians
   for (let i = 0; i < vaxData.length; i++) {
@@ -169,7 +169,7 @@ function vax(x) {
     tickSpec2.layer[0].encoding.x.sort.field = "PERC_1PLUS";
     tickSpec2.layer[1].encoding.x.sort.field = "PERC_1PLUS";
     document.getElementById("lozip").innerHTML = vax1PlusMin.PERC_1PLUS;
-    document.getElementById("hizip").innerHTML = vax1PlusMax.PERC_1PLUS;
+    document.getElementById("hizip").innerHTML = '99.9';
     document.getElementById("zrv").innerHTML = zipVaxData[0].PERC_1PLUS;
     document.getElementById("metrictext").innerHTML =
       "have had at least 1 dose.";
@@ -189,7 +189,7 @@ function vax(x) {
     tickSpec2.layer[0].encoding.x.sort.field = "PERC_FULLY";
     tickSpec2.layer[1].encoding.x.sort.field = "PERC_FULLY";
     document.getElementById("lozip").innerHTML = vaxFullyMin.PERC_FULLY;
-    document.getElementById("hizip").innerHTML = vaxFullyMax.PERC_FULLY;
+    document.getElementById("hizip").innerHTML = '99.9';
     document.getElementById("zrv").innerHTML = zipVaxData[0].PERC_FULLY;
     document.getElementById("metrictext").innerHTML = "are fully vaccinated.";
     document.getElementById("zrmv").innerHTML = vaxFullyMedian;
