@@ -89,7 +89,7 @@ d3.csv(
 
 // pulls in Transmission data.
 d3.csv(
-  "https://gist.githubusercontent.com/mmontesanonyc/2fdc46bcac05e56cac382524717e4d35/raw/2a9415cc64fb5e2ed3b1b8f513c4677c15619912/sevenday_caserates.csv"
+  "https://raw.githubusercontent.com/nychealth/coronavirus-data/master/latest/7day-transmission-rate.csv"
 ).then(function (data) {
   trendData = data;
   // Establishes the most recent entry in Trend Data.
