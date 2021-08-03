@@ -173,7 +173,7 @@ function vax(x) {
     document.getElementById("zrv").innerHTML = zipVaxData[0].PERC_1PLUS;
     document.getElementById("metrictext").innerHTML =
       "have had at least 1 dose.";
-    document.getElementById("zrmv").innerHTML = vax1Median;
+    document.getElementById("zrmv").innerHTML = vax1Median + "%";
     testMedians(1);
     vegaEmbed("#ticks2", tickSpec2).then((res) =>
       res.view.insert("tickData", vaxData).run()
@@ -192,7 +192,7 @@ function vax(x) {
     document.getElementById("hizip").innerHTML = '99.9';
     document.getElementById("zrv").innerHTML = zipVaxData[0].PERC_FULLY;
     document.getElementById("metrictext").innerHTML = "are fully vaccinated.";
-    document.getElementById("zrmv").innerHTML = vaxFullyMedian;
+    document.getElementById("zrmv").innerHTML = vaxFullyMedian  + "%";
     testMedians(2);
     vegaEmbed("#ticks2", tickSpec2).then((res) =>
       res.view.insert("tickData", vaxData).run()
@@ -510,10 +510,10 @@ function changeNeighborhood(zipCode) {
   // comparing vax rates to citywide
   document.getElementById("vccomp").removeAttribute("class"); // first strip previous styles
   if (Number(zipVaxData[0].PERC_1PLUS) > Number(boroVax[0].PERC_1PLUS)) {
-    document.getElementById("vccomp").innerHTML = "Higher";
+    document.getElementById("vccomp").innerHTML = "&nbsp;Higher&nbsp;";
     document.getElementById("vccomp").classList.add("lower");
   } else {
-    document.getElementById("vccomp").innerHTML = "Lower";
+    document.getElementById("vccomp").innerHTML = "&nbsp;Lower&nbsp;";
     document.getElementById("vccomp").classList.add("higher");
   }
 
@@ -637,10 +637,10 @@ function changeNeighborhood(zipCode) {
     document.getElementById("boro3").innerHTML = "The Bronx";
     // nested IF
     if (Number(zipVaxData[0].PERC_1PLUS) > Number(boroVax[1].PERC_1PLUS)) {
-      document.getElementById("vbcomp").innerHTML = "Higher";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Higher&nbsp;";
       document.getElementById("vbcomp").classList.add("lower");
     } else {
-      document.getElementById("vbcomp").innerHTML = "Lower";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Lower&nbsp;";
       document.getElementById("vbcomp").classList.add("higher");
     }
   } else if (parentBoro === "Brooklyn") {
@@ -648,10 +648,10 @@ function changeNeighborhood(zipCode) {
     document.getElementById("boro3").innerHTML = parentBoro;
     // nested IF
     if (Number(zipVaxData[0].PERC_1PLUS) > Number(boroVax[2].PERC_1PLUS)) {
-      document.getElementById("vbcomp").innerHTML = "Higher";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Higher&nbsp;";
       document.getElementById("vbcomp").classList.add("lower");
     } else {
-      document.getElementById("vbcomp").innerHTML = "Lower";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Lower&nbsp;";
       document.getElementById("vbcomp").classList.add("higher");
     }
   } else if (parentBoro === "Manhattan") {
@@ -659,10 +659,10 @@ function changeNeighborhood(zipCode) {
     document.getElementById("boro3").innerHTML = parentBoro;
     // nested IF
     if (Number(zipVaxData[0].PERC_1PLUS) > Number(boroVax[3].PERC_1PLUS)) {
-      document.getElementById("vbcomp").innerHTML = "Higher";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Higher&nbsp;";
       document.getElementById("vbcomp").classList.add("lower");
     } else {
-      document.getElementById("vbcomp").innerHTML = "Lower";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Lower&nbsp;";
       document.getElementById("vbcomp").classList.add("higher");
     }
   } else if (parentBoro === "Queens") {
@@ -670,10 +670,10 @@ function changeNeighborhood(zipCode) {
     document.getElementById("boro3").innerHTML = parentBoro;
     // nested IF
     if (Number(zipVaxData[0].PERC_1PLUS) > Number(boroVax[4].PERC_1PLUS)) {
-      document.getElementById("vbcomp").innerHTML = "Higher";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Higher&nbsp;";
       document.getElementById("vbcomp").classList.add("lower");
     } else {
-      document.getElementById("vbcomp").innerHTML = "Lower";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Lower&nbsp;";
       document.getElementById("vbcomp").classList.add("higher");
     }
   } else {
@@ -681,10 +681,10 @@ function changeNeighborhood(zipCode) {
     document.getElementById("boro3").innerHTML = "Staten Island";
     // nested IF
     if (Number(zipVaxData[0].PERC_1PLUS) > Number(boroVax[5].PERC_1PLUS)) {
-      document.getElementById("vbcomp").innerHTML = "Higher";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Higher&nbsp;";
       document.getElementById("vbcomp").classList.add("lower");
     } else {
-      document.getElementById("vbcomp").innerHTML = "Lower";
+      document.getElementById("vbcomp").innerHTML = "&nbsp;Lower&nbsp;";
       document.getElementById("vbcomp").classList.add("higher");
     }
   }
@@ -733,7 +733,7 @@ function changeNeighborhood(zipCode) {
 
   //Sending initial min, max, median, values to range chart
   document.getElementById("zrv").innerHTML = zipVaxData[0].PERC_1PLUS;
-  document.getElementById("zrmv").innerHTML = vax1Median;
+  document.getElementById("zrmv").innerHTML = vax1Median  + "%";
 
   testMedians(1);
 
@@ -752,18 +752,18 @@ function testMedians(x) {
 
   if (x == 1) {
     if (perc1 < vax1Median) {
-      document.getElementById("medcomp").innerHTML = "Lower";
+      document.getElementById("medcomp").innerHTML = "&nbsp;Lower&nbsp;";
       document.getElementById("medcomp").classList.add("higher");
     } else {
-      document.getElementById("medcomp").innerHTML = "Higher";
+      document.getElementById("medcomp").innerHTML = "&nbsp;Higher&nbsp;";
       document.getElementById("medcomp").classList.add("lower");
     }
   } else if (x == 2) {
     if (percF < vaxFullyMedian) {
-      document.getElementById("medcomp").innerHTML = "Lower";
+      document.getElementById("medcomp").innerHTML = "&nbsp;Lower&nbsp;";
       document.getElementById("medcomp").classList.add("higher");
     } else {
-      document.getElementById("medcomp").innerHTML = "Higher";
+      document.getElementById("medcomp").innerHTML = "&nbsp;Higher&nbsp;";
       document.getElementById("medcomp").classList.add("lower");
     }
   }
