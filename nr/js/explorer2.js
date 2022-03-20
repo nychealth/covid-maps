@@ -89,7 +89,7 @@ d3.csv(
 
 // pulls in Transmission data.
 d3.csv(
-  "https://gist.githubusercontent.com/mmontesanonyc/2fdc46bcac05e56cac382524717e4d35/raw/2a9415cc64fb5e2ed3b1b8f513c4677c15619912/sevenday_caserates.csv"
+  "https://raw.githubusercontent.com/nychealth/coronavirus-data/master/latest/7day-transmission-rate.csv"
 ).then(function (data) {
   trendData = data;
   // Establishes the most recent entry in Trend Data.
@@ -128,7 +128,7 @@ d3.csv(
   vaxFullyMax = getMax(vaxData, "PERC_FULLY");
 
   document.getElementById("lozip").innerHTML = vax1PlusMin.PERC_1PLUS;
-  document.getElementById("hizip").innerHTML = vax1PlusMax.PERC_1PLUS;
+  document.getElementById("hizip").innerHTML = '99.9';
 
   // Getting medians
   for (let i = 0; i < vaxData.length; i++) {
@@ -169,11 +169,11 @@ function vax(x) {
     tickSpec2.layer[0].encoding.x.sort.field = "PERC_1PLUS";
     tickSpec2.layer[1].encoding.x.sort.field = "PERC_1PLUS";
     document.getElementById("lozip").innerHTML = vax1PlusMin.PERC_1PLUS;
-    document.getElementById("hizip").innerHTML = vax1PlusMax.PERC_1PLUS;
+    document.getElementById("hizip").innerHTML = '99.9';
     document.getElementById("zrv").innerHTML = zipVaxData[0].PERC_1PLUS;
     document.getElementById("metrictext").innerHTML =
       "have had at least 1 dose.";
-    document.getElementById("zrmv").innerHTML = vax1Median;
+    document.getElementById("zrmv").innerHTML = vax1Median + "%";
     testMedians(1);
     vegaEmbed("#ticks2", tickSpec2).then((res) =>
       res.view.insert("tickData", vaxData).run()
@@ -189,10 +189,10 @@ function vax(x) {
     tickSpec2.layer[0].encoding.x.sort.field = "PERC_FULLY";
     tickSpec2.layer[1].encoding.x.sort.field = "PERC_FULLY";
     document.getElementById("lozip").innerHTML = vaxFullyMin.PERC_FULLY;
-    document.getElementById("hizip").innerHTML = vaxFullyMax.PERC_FULLY;
+    document.getElementById("hizip").innerHTML = '99.9';
     document.getElementById("zrv").innerHTML = zipVaxData[0].PERC_FULLY;
     document.getElementById("metrictext").innerHTML = "are fully vaccinated.";
-    document.getElementById("zrmv").innerHTML = vaxFullyMedian;
+    document.getElementById("zrmv").innerHTML = vaxFullyMedian  + "%";
     testMedians(2);
     vegaEmbed("#ticks2", tickSpec2).then((res) =>
       res.view.insert("tickData", vaxData).run()
@@ -436,7 +436,7 @@ function changeMetric(y) {
   } else {
     metric = "TESTRATE";
     document.getElementById("datalabel").innerHTML =
-      "Molecular test rate (per 100,000 people)";
+      "Test rate (per 100,000 people)";
   }
 
   chartDraw(zipString, metric);
@@ -565,7 +565,7 @@ function changeNeighborhood(zipCode) {
 
   var pc2 =
     1 / (zipCodeData[0].COVID_DEATH_COUNT / zipCodeData[0].POP_DENOMINATOR);
-  document.getElementById("pc2").innerHTML = Math.floor(pc2).toLocaleString("en-US");
+  document.getElementById("pc2").innerHTML = Math.floor(pc2);
 
   // Case rate, ZIP to Boro:
   document.getElementById("hilo1").removeAttribute("class"); // first strip previous styles
@@ -689,36 +689,17 @@ function changeNeighborhood(zipCode) {
     }
   }
 
-  // // adds trandmission stuff
-  // uhfSelect = uhfList.filter((item) => item.Zipcodes.indexOf(zipCode) !== -1);
-  // uhfSelectId = "UHF" + uhfSelect[0].UHF_id;
-  // // now we have uhfSelectId that we can use to filter mostRecent
+  // adds trandmission stuff
+  uhfSelect = uhfList.filter((item) => item.Zipcodes.indexOf(zipCode) !== -1);
+  uhfSelectId = "UHF" + uhfSelect[0].UHF_id;
+  // now we have uhfSelectId that we can use to filter mostRecent
 
-  // uhfTransmission = mostRecent[uhfSelectId];
-  // uhfTransmission = Number(uhfTransmission);
-  // document.getElementById("levelin").removeAttribute("class");
+  uhfTransmission = mostRecent[uhfSelectId];
+  uhfTransmission = Number(uhfTransmission);
 
-  // if (uhfTransmission < 10) {
-  //   uhfLevel = "Low";
-  //   document.getElementById("levelin").classList.add("low");
-  // } else if (uhfTransmission > 10 && uhfTransmission < 50) {
-  //   uhfLevel = "Moderate";
-  //   document.getElementById("levelin").classList.add("moderate");
-  // } else if (uhfTransmission > 50 && uhfTransmission < 100) {
-  //   uhfLevel = "Substantial";
-  //   document.getElementById("levelin").classList.add("substantial");
-  // } else if (uhfTransmission > 100) {
-  //   uhfLevel = "High";
-  //   document.getElementById("levelin").classList.add("high");
-  // } else {
-  // }
+  document.getElementById("levelnumin").innerHTML = uhfTransmission;
 
-  // document.getElementById("levelin").innerHTML = uhfLevel;
-  // document.getElementById("levelnumin").innerHTML = uhfTransmission;
-  // document.getElementById("uhfin").innerHTML = uhfSelect[0].Zipcodes;
-
-
-
+  document.getElementById("uhfin").innerHTML = uhfSelect[0].Zipcodes;
 
   // Draws the chart based on the ZIP!
   chartDraw(zipString, metric);
@@ -735,7 +716,7 @@ function changeNeighborhood(zipCode) {
 
   //Sending initial min, max, median, values to range chart
   document.getElementById("zrv").innerHTML = zipVaxData[0].PERC_1PLUS;
-  document.getElementById("zrmv").innerHTML = vax1Median;
+  document.getElementById("zrmv").innerHTML = vax1Median  + "%";
 
   testMedians(1);
 
@@ -754,18 +735,18 @@ function testMedians(x) {
 
   if (x == 1) {
     if (perc1 < vax1Median) {
-      document.getElementById("medcomp").innerHTML = "Lower";
+      document.getElementById("medcomp").innerHTML = "&nbsp;Lower&nbsp;";
       document.getElementById("medcomp").classList.add("higher");
     } else {
-      document.getElementById("medcomp").innerHTML = "Higher";
+      document.getElementById("medcomp").innerHTML = "&nbsp;Higher&nbsp;";
       document.getElementById("medcomp").classList.add("lower");
     }
   } else if (x == 2) {
     if (percF < vaxFullyMedian) {
-      document.getElementById("medcomp").innerHTML = "Lower";
+      document.getElementById("medcomp").innerHTML = "&nbsp;Lower&nbsp;";
       document.getElementById("medcomp").classList.add("higher");
     } else {
-      document.getElementById("medcomp").innerHTML = "Higher";
+      document.getElementById("medcomp").innerHTML = "&nbsp;Higher&nbsp;";
       document.getElementById("medcomp").classList.add("lower");
     }
   }
