@@ -1,0 +1,80 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+canvas {
+    display: block;
+}
+  
+p {
+    font-size: 13px;
+    /* margin: 5px; */
+
+}
+  
+h1 {
+    /* padding: 0px 10px 10px 5px; */
+    font-size: 20px;
+    text-align: center;
+
+}
+  
+h2 {
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+  
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: white;
+    border-bottom: 3px solid rgba(0,0,0, .9);
+
+}
+  
+.grid-item {
+    padding: 5px;
+    text-align: center;
+    color: black;
+}
+/* 
+ .cont {
+    padding: 0px 3px 0px 3px;
+ background-color: rgba(233, 230, 230, 0.863); 
+ } */
+
+
+.border-style {
+    border-bottom: 3px solid rgba(0,0,0, .9);
+
+}
+  
+p.info {
+      font-size: 14px;
+      text-align: left;
+      font-weight: 400;
+}
+
+#caseRate,
+#admissionsPer100,
+#bedsOccupied {
+    color: black;
+}
+  
+#caseRateDate, 
+#bedOccupancyDate, 
+#herdsLastUpdatedDate {
+    color:rgb(85,85,85);
+    text-align: left;
+    font-size: 13px;
+    font-weight: 300;
+
+}
+
+
+  

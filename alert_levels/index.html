@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="alert.js" type="text/javascript"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+    </style>
+  </head>
+  
+  <body>
+    <div class="grid-container">
+        <div class="grid-item border-style">
+            <h2>New Cases</h2>
+            <p class="info">New confirmed and probable cases per 100k in the last 7 days</p>
+            <p id="caseRateDate"></p>
+        </div>
+        <div class="grid-item border-style">
+            <h2>Hospitalization Rate</h2>
+            <p class="info">Total new admissions with COVID-19 per 100k in the last 7 days</p>
+            <p id="herdsLastUpdatedDate"></p>
+        </div>
+        <div class="grid-item border-style">
+            <h2>Bed Occupancy</h2>
+            <p class="info">Percent Staffed inpatient beds occupied by COVID-19 patients (7-day lag)</p>
+            <p id="bedOccupancyDate"></p>
+        </div>
+        <div class="cont">
+        <div class="grid-item ">
+            <h1><span id="caseRate"></span></h1>
+        </div>
+    </div>
+    <div class="cont">
+        <div class="grid-item">
+            <h1>
+                <span id="admissionsPer100"></span>
+            </h1>
+        </div>
+    </div>
+    <div class="cont">
+        <div class="grid-item">
+            <h1>
+                <span id="bedsOccupied"></span>%
+            </h1>
+        </div>
+    </div>
+    </div>
+  </body>
+</html>
