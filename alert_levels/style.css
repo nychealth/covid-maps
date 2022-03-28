@@ -9,7 +9,7 @@ canvas {
 }
   
 p {
-    font-size: 13px;
+    font-size: 12px;
     /* margin: 5px; */
 
 }
@@ -23,7 +23,7 @@ h1 {
   
 h2 {
     color: rgb(0, 0, 0);
-    font-size: 22px;
+    font-size: 20px;
     text-align: left;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -33,12 +33,12 @@ h2 {
     display: grid;
     grid-template-columns: auto auto auto;
     background-color: white;
-    border-bottom: 3px solid rgba(0,0,0, .9);
+    border-bottom: 3px solid rgba(26, 25, 25, 0.9);
 
 }
   
 .grid-item {
-    padding: 5px;
+    padding: 1px;
     text-align: center;
     color: black;
 }
@@ -50,14 +50,14 @@ h2 {
 
 
 .border-style {
-    border-bottom: 3px solid rgba(0,0,0, .9);
+    border-bottom: 3px solid rgba(26, 25, 25, 0.9);
 
 }
   
 p.info {
       font-size: 14px;
       text-align: left;
-      font-weight: 400;
+      font-weight: 300;
 }
 
 #caseRate,
@@ -71,9 +71,8 @@ p.info {
 #herdsLastUpdatedDate {
     color:rgb(85,85,85);
     text-align: left;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 300;
-
 }
 
 
