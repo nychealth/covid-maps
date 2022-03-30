@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="alert.js" type="text/javascript"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+    </style>
+  </head>
+  
+  <body>
+    <div class="grid-container">
+        <div class="grid-item border-style">
+            <h2>Случаи заражения</h2>
+            <p id="caseRateDate"></p>
+            <p class="info">Новые случаи заражения на 100,000 населения за последние семь дней</p>
+        </div>
+        <div class="grid-item border-style">
+            <h2>Случаи госпитализации</h2>
+            <p id="herdsLastUpdatedDate"></p>
+            <p class="info">Новые поступления в больницы с COVID-19 на 100,000 населения за последние семь дней</p>
+        </div>
+        <div class="grid-item border-style">
+            <h2>Нагрузка на стационар</h2>
+            <p id="bedOccupancyDate"></p>
+            <p class="info">Процент больничных коек, занятых пациентами с COVID-19</p>
+        </div>
+        <div class="cont">
+        <div class="grid-item ">
+            <h1><span id="caseRate"></span></h1>
+        </div>
+    </div>
+    <div class="cont">
+        <div class="grid-item">
+            <h1>
+                <span id="admissionsPer100"></span>
+            </h1>
+        </div>
+    </div>
+    <div class="cont">
+        <div class="grid-item">
+            <h1>
+                <span id="bedsOccupied"></span>%
+            </h1>
+        </div>
+    </div>
+    </div>
+  </body>
+</html>
