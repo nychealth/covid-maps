@@ -21,7 +21,7 @@ function setColor(d) {
 Pull in alert level data; clean the data; return elements for the data values to be added to the DOM
 */
 async function getData() {
-    const response = await fetch('https://raw.githubusercontent.com/nychealth/covid-maps/main/alert_levels/nyc_alert_levels.csv');
+    const response = await fetch('https://raw.githubusercontent.com/nychealth/coronavirus-data/master/alert-levels/nyc_alert_levels.csv');
     const data = await response.text();
     const table = data.split('\n').slice(1,2);
 
