@@ -87,21 +87,21 @@ p.info {
 
 .link-id{
     margin-left: auto;
-    color: #4DA6FF
+    color: #378ce0
   }
 
   a:link {
-    color: #4DA6FF
+    color: #378ce0
   }
   /* visited link */
   a:visited {
-    color: #4DA6FF
+    color: #378ce0
   }
   /* mouse over link */
   a:hover {
-    color:#4DA6FF
+    color:#378ce0
   }
   /* selected link */
   a:active {
-    color:#4DA6FF
+    color:#378ce0
   }
