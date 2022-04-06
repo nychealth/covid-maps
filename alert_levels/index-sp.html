@@ -13,17 +13,14 @@
     <div class="grid-container">
         <div class="grid-item border-style">
             <h2>Casos</h2>
-            <p id="caseRateDate"></p>
             <p class="info">Nuevos casos por cada 100 000 personas en los últimos siete días</p>
         </div>
         <div class="grid-item border-style">
             <h2>Hospitalizaciones</h2>
-            <p id="herdsLastUpdatedDate"></p>
             <p class="info">Nuevos ingresos por COVID-19 por cada 100 000 personas en los últimos siete días</p>
         </div>
         <div class="grid-item border-style">
             <h2>Ocupación hospitalaria</h2>
-            <p id="bedOccupancyDate"></p>
             <p class="info">Porcentaje de camas de hospitalización ocupadas por pacientes con COVID-19</p>
         </div>
         <div class="cont">
@@ -46,5 +43,12 @@
         </div>
     </div>
     </div>
+    <div class="date-indicator">
+        <p>Datos a partir de: <span id="caseRateDate"></span></p>
+           <div class="link-id">
+               <p><a href="https://github.com/nychealth/coronavirus-data/tree/master/alert-levels" target="_blank">Sobre los datos de este gráfico</a> | 
+                   <a href="https://github.com/nychealth/coronavirus-data/blob/master/alert-levels/nyc_alert_levels.csv" target="_blank">Obtenga los datos</a></p>
+           </div>
+       </div>
   </body>
 </html>

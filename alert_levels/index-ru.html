@@ -13,17 +13,14 @@
     <div class="grid-container">
         <div class="grid-item border-style">
             <h2>Случаи заражения</h2>
-            <p id="caseRateDate"></p>
             <p class="info">Новые случаи заражения на 100,000 населения за последние семь дней</p>
         </div>
         <div class="grid-item border-style">
             <h2>Случаи госпитализации</h2>
-            <p id="herdsLastUpdatedDate"></p>
             <p class="info">Новые поступления в больницы с COVID-19 на 100,000 населения за последние семь дней</p>
         </div>
         <div class="grid-item border-style">
             <h2>Нагрузка на стационар</h2>
-            <p id="bedOccupancyDate"></p>
             <p class="info">Процент больничных коек, занятых пациентами с COVID-19</p>
         </div>
         <div class="cont">
@@ -46,5 +43,12 @@
         </div>
     </div>
     </div>
+    <div class="date-indicator">
+        <p>Данные по состоянию на: <span id="caseRateDate"></span></p>
+           <div class="link-id">
+               <p><a href="https://github.com/nychealth/coronavirus-data/tree/master/alert-levels" target="_blank">Информация о данных из этой таблицы</a> | 
+                   <a href="https://github.com/nychealth/coronavirus-data/blob/master/alert-levels/nyc_alert_levels.csv" target="_blank">Получить данные</a></p>
+           </div>
+       </div>
   </body>
 </html>

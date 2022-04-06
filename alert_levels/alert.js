@@ -33,11 +33,10 @@ async function getData() {
         let bedsOccupiedByCovidPatients = indicatorVal[3]*100;
         let alertLevel = indicatorVal[4];
         alertLevel = alertLevel.replace(/\s+/g, '')
-    
+
+
         let mydate =  new Date(lastUpdateDate); 
         let strDate = mydate.toLocaleDateString();
-        
-        
 
 
         document.getElementById("caseRate").innerHTML = roundDecimal(caseRate7DayTotal,2);

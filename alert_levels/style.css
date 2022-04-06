@@ -89,3 +89,19 @@ p.info {
     margin-left: auto;
     color: #4DA6FF
   }
+
+  a:link {
+    color: #4DA6FF
+  }
+  /* visited link */
+  a:visited {
+    color: #4DA6FF
+  }
+  /* mouse over link */
+  a:hover {
+    color:#4DA6FF
+  }
+  /* selected link */
+  a:active {
+    color:#4DA6FF
+  }
