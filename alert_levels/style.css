@@ -34,6 +34,7 @@ h2 {
     grid-template-columns: auto auto auto;
     background-color: white;
     border-bottom: 3px solid rgba(26, 25, 25, 0.9);
+    /* grid-auto-rows: minmax(180, 250); */
 
 }
   
@@ -42,8 +43,8 @@ h2 {
     text-align: center;
     color: black;
 }
-/* 
- .cont {
+
+ /* .cont {
     padding: 0px 3px 0px 3px;
  background-color: rgba(233, 230, 230, 0.863); 
  } */
@@ -68,12 +69,23 @@ p.info {
   
 #caseRateDate, 
 #bedOccupancyDate, 
-#herdsLastUpdatedDate {
+#herdsLastUpdatedDate,
+.date-indicator {
     color:rgb(85,85,85);
     text-align: left;
     font-size: 12px;
     font-weight: 300;
 }
 
+.date-indicator{
+    display: flex;
+    flex-direction: row;
+    /* align-self: flex-end;
+    justify-content: flex-start; */
+    /* width:100%; */
+    }
 
-  
+.link-id{
+    margin-left: auto;
+    color: #4DA6FF
+  }

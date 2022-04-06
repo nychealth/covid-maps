@@ -13,38 +13,43 @@
     <div class="grid-container">
         <div class="grid-item border-style">
             <h2>Cases</h2>
-            <p id="caseRateDate"></p>
             <p class="info">New cases per 100,000 people in the last seven days</p>
         </div>
         <div class="grid-item border-style">
             <h2>Hospitalizations</h2>
-            <p id="herdsLastUpdatedDate"></p>
             <p class="info">New admissions with COVID-19 per 100,000 people in the last seven days</p>
         </div>
         <div class="grid-item border-style">
             <h2>Hospital Occupancy</h2>
-            <p id="bedOccupancyDate"></p>
             <p class="info">Percent of inpatient beds occupied by COVID-19 patients</p>
         </div>
         <div class="cont">
-        <div class="grid-item ">
-            <h1><span id="caseRate"></span></h1>
+            <div class="grid-item">
+              <h1><span id="caseRate"></span></h1>
+            </div>
+        </div>
+        <div class="cont">
+            <div class="grid-item">
+                <h1>
+                    <span id="admissionsPer100"></span>
+                </h1>
+            </div>
+        </div>
+        <div class="cont">
+            <div class="grid-item">
+                <h1>
+                    <span id="bedsOccupied"></span>%
+                </h1>
+            </div>
         </div>
     </div>
-    <div class="cont">
-        <div class="grid-item">
-            <h1>
-                <span id="admissionsPer100"></span>
-            </h1>
+    <div class="date-indicator">
+     <p>Data as of: <span id="caseRateDate"></span></p>
+        <div class="link-id">
+            <p><a href="https://github.com/nychealth/coronavirus-data/tree/master/alert-levels" target="_blank">About the data for this chart</a> | 
+                <a href="https://github.com/nychealth/coronavirus-data/blob/master/alert-levels/nyc_alert_levels.csv" target="_blank"> Get the data</a></p>
         </div>
     </div>
-    <div class="cont">
-        <div class="grid-item">
-            <h1>
-                <span id="bedsOccupied"></span>%
-            </h1>
-        </div>
-    </div>
-    </div>
+
   </body>
 </html>

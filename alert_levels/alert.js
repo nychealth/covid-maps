@@ -34,17 +34,24 @@ async function getData() {
         let alertLevel = indicatorVal[4];
         alertLevel = alertLevel.replace(/\s+/g, '')
     
+        let mydate =  new Date(lastUpdateDate); 
+        let strDate = mydate.toLocaleDateString();
+        
+        
+
+
         document.getElementById("caseRate").innerHTML = roundDecimal(caseRate7DayTotal,2);
         document.getElementById("admissionsPer100").innerHTML = roundDecimal(admissionsPer100k,1)
         document.getElementById("bedsOccupied").innerHTML = roundDecimal(bedsOccupiedByCovidPatients, 2);
         //dates
-        document.getElementById("herdsLastUpdatedDate").innerHTML = lastUpdateDate;
-        document.getElementById("bedOccupancyDate").innerHTML = lastUpdateDate;
-        document.getElementById("caseRateDate").innerHTML = lastUpdateDate;
+        // document.getElementById("herdsLastUpdatedDate").innerHTML = lastUpdateDate;
+        // document.getElementById("bedOccupancyDate").innerHTML = lastUpdateDate;
+
+        document.getElementById("caseRateDate").innerHTML = strDate;
 
         let x = document.querySelectorAll(".grid-item")
-  
-        for(let i = 3; i < x.length; i++) {
+        console.log(x)
+        for (let i = 3; i < x.length; i++) {
             x[i].style.background = setColor(alertLevel)
         }
   })   
