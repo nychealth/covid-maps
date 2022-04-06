@@ -46,7 +46,7 @@ async function getData() {
         // document.getElementById("herdsLastUpdatedDate").innerHTML = lastUpdateDate;
         // document.getElementById("bedOccupancyDate").innerHTML = lastUpdateDate;
 
-        document.getElementById("caseRateDate").innerHTML = strDate;
+        document.getElementById("caseRateDate").innerHTML = lastUpdateDate;
 
         let x = document.querySelectorAll(".grid-item")
         console.log(x)
