@@ -36,8 +36,9 @@ async function getData() {
 
 
         let mydate =  new Date(lastUpdateDate); 
-        let strDate = mydate.toLocaleDateString();
-
+        const month = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"];
+        let outputDate = `${month[mydate.getMonth()]} ${mydate.getDate()+1}, ${mydate.getFullYear()}`;
 
         document.getElementById("caseRate").innerHTML = roundDecimal(caseRate7DayTotal,2);
         document.getElementById("admissionsPer100").innerHTML = roundDecimal(admissionsPer100k,1)
@@ -46,7 +47,7 @@ async function getData() {
         // document.getElementById("herdsLastUpdatedDate").innerHTML = lastUpdateDate;
         // document.getElementById("bedOccupancyDate").innerHTML = lastUpdateDate;
 
-        document.getElementById("caseRateDate").innerHTML = lastUpdateDate;
+        document.getElementById("caseRateDate").innerHTML = outputDate;
 
         let x = document.querySelectorAll(".grid-item")
         console.log(x)
