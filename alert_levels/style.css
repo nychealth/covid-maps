@@ -28,20 +28,24 @@ h2 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
 }
+
+h3 {
+    margin: 0;
+    padding-bottom: 10px;
+}
   
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
     background-color: white;
-    border-bottom: 3px solid rgba(26, 25, 25, 0.9);
+    /* border-bottom: 3px solid rgba(26, 25, 25, 0.9); */
     /* grid-auto-rows: minmax(180, 250); */
-
 }
   
 .grid-item {
     padding: 1px;
-    text-align: center;
     color: black;
+    text-align: center;
 }
 
  /* .cont {
@@ -52,6 +56,7 @@ h2 {
 
 .border-style {
     border-bottom: 3px solid rgba(26, 25, 25, 0.9);
+    
 
 }
   
@@ -71,10 +76,35 @@ p.info {
 #bedOccupancyDate, 
 #herdsLastUpdatedDate,
 .date-indicator {
+    padding-top: 5px;
     color:rgb(85,85,85);
     text-align: left;
     font-size: 12px;
     font-weight: 300;
+}
+
+
+#caseRateStatus,
+#admissionsPer100Status,
+#bedsOccupiedStatus {
+    text-align: center;
+    color:rgb(41, 40, 40);
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+#caseRateStatusSP,
+#admissionsPer100StatusSP,
+#bedsOccupiedStatusSP {
+    text-align: center;
+    color:rgb(41, 40, 40);
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+.comparison-copy {
+    color:rgb(85,85,85);
+    font-size: 13px;
 }
 
 .date-indicator{

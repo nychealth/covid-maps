@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sc">
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -24,24 +24,33 @@
             <p class="info">COVID-19 患者占用住院病床的百分比</p>
         </div>
         <div class="cont">
-        <div class="grid-item ">
+            <div class="grid-item border-style">
             <h1><span id="caseRate"></span></h1>
+            <h3><span id="caseRateStatus"></span></h2>
+
         </div>
     </div>
     <div class="cont">
-        <div class="grid-item">
+        <div class="grid-item border-style">
             <h1>
                 <span id="admissionsPer100"></span>
+                <h3><span id="admissionsPer100Status"></span></h3>
+
             </h1>
         </div>
     </div>
     <div class="cont">
-        <div class="grid-item">
+        <div class="grid-item border-style">
             <h1>
                 <span id="bedsOccupied"></span>%
+                <h3><span id="bedsOccupiedStatus"></span></h3>
+
             </h1>
         </div>
     </div>
+    </div>
+    <div class="comparison-copy">
+        <p>比较基于前一周的数据</p>
     </div>
     <div class="date-indicator">
         <p>数据截至：<span id="caseRateDate"></span></p>

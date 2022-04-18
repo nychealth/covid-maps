@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -24,24 +24,31 @@
             <p class="info">Процент больничных коек, занятых пациентами с COVID-19</p>
         </div>
         <div class="cont">
-        <div class="grid-item ">
+        <div class="grid-item border-style">
             <h1><span id="caseRate"></span></h1>
+            <h3><span id="caseRateStatus"></span></h2>
         </div>
     </div>
     <div class="cont">
-        <div class="grid-item">
+        <div class="grid-item border-style">
             <h1>
                 <span id="admissionsPer100"></span>
+                <h3><span id="admissionsPer100Status"></span></h3>
+
             </h1>
         </div>
     </div>
     <div class="cont">
-        <div class="grid-item">
+        <div class="grid-item border-style">
             <h1>
                 <span id="bedsOccupied"></span>%
+                <h3><span id="bedsOccupiedStatus"></span></h3>
             </h1>
         </div>
     </div>
+    </div>
+    <div class="comparison-copy">
+        <p>Сопоставления основаны на данных за прошедшую неделю</p>
     </div>
     <div class="date-indicator">
         <p>Данные по состоянию на: <span id="caseRateDate"></span></p>
