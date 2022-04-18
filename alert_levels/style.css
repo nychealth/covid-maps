@@ -11,6 +11,16 @@ canvas {
 p {
     font-size: 12px;
     /* margin: 5px; */
+    /* margin: 0; */
+
+}
+
+p.dateNum {
+    margin: 1px;
+}
+
+p.cBottom {
+    margin-bottom: 0;
 
 }
   
@@ -92,22 +102,13 @@ p.info {
     font-size: 15px;
     padding-bottom: 10px;
 }
-
-#caseRateStatusSP,
-#admissionsPer100StatusSP,
-#bedsOccupiedStatusSP {
-    text-align: center;
-    color:rgb(41, 40, 40);
-    font-size: 15px;
-    padding-bottom: 10px;
-}
-
 .comparison-copy {
     color:rgb(85,85,85);
     font-size: 13px;
 }
 
 .date-indicator{
+    margin: 0;
     display: flex;
     flex-direction: row;
     /* align-self: flex-end;
