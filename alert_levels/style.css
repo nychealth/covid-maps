@@ -67,10 +67,11 @@ h3 {
 }
   
 p.info {
-      font-size: 14px;
-      text-align: left;
-      font-weight: 300;
-}
+    font-size: 14px;
+    text-align: left;
+    font-weight: 300;
+    padding-right: 5px;
+    }
 
 #caseRate,
 #admissionsPer100,
