@@ -25,6 +25,8 @@ p.cBottom {
 }
   
 h1 {
+    padding-top: 5px;
+    margin: 0;
     /* padding: 0px 10px 10px 5px; */
     font-size: 20px;
     text-align: center;
@@ -41,7 +43,7 @@ h2 {
 
 h3 {
     margin: 0;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
   
 .grid-container {
@@ -57,12 +59,6 @@ h3 {
     color: black;
     text-align: center;
 }
-
- /* .cont {
-    padding: 0px 3px 0px 3px;
- background-color: rgba(233, 230, 230, 0.863); 
- } */
-
 
 .border-style {
     border-bottom: 3px solid rgba(26, 25, 25, 0.9);
