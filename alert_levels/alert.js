@@ -107,7 +107,8 @@ async function getData() {
 
         
 
-        document.getElementById("caseRateDate").innerHTML = outputDate;
+        // document.getElementById("caseRateDate").innerHTML = outputDate;
+        document.getElementById("caseRateDate").innerHTML = 'DOHMH: May 31, 2022; HERDS: June 1, 2022';
 
         //Trend Status
         document.getElementById("caseRateStatus").innerHTML = setAlertStatus(lang, caseRate7DayTotalStatus);
