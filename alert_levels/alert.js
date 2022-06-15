@@ -100,7 +100,7 @@ async function getData() {
         const month = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"];
         //let outputDate = `${month[mydate.getMonth()]} ${mydate.getDate()+1}, ${mydate.getFullYear()}`;
-        Let outputDate = 'DOHMH: June 11, 2022; HERDS: June 10, 2022'
+        Let outputDate = 'DOHMH: June 11, 2022; HERDS: June 10, 2022';
         document.getElementById("caseRate").innerHTML = roundDecimal(caseRate7DayTotal,2);
         document.getElementById("admissionsPer100").innerHTML = roundDecimal(admissionsPer100k,1)
         document.getElementById("bedsOccupied").innerHTML = roundDecimal(bedsOccupiedByCovidPatients, 2);
