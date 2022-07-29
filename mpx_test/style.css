@@ -1,0 +1,53 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', sans-serif;
+}
+
+canvas {
+    display: block;
+}
+  
+p {
+    font-size: 12px;
+    /* margin: 5px; */
+    /* margin: 0; */
+
+}
+
+p.dateNum {
+    margin: 1px;
+}
+
+p.cBottom {
+    margin-bottom: 0;
+
+}
+  
+  
+
+#diagnosisDate {
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 10px;
+	font-style: italic;
+	
+}
+.comparison-copy {
+    color:rgb(85,85,85);
+    font-size: 13px;
+}
+
+.date-indicator{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    /* align-self: flex-end;
+    justify-content: flex-start; */
+    /* width:100%; */
+    }
+
+.total-case-date{
+    margin-left: auto;
+	font-size: 13px;
+  }
