@@ -33,19 +33,8 @@ p.cBottom {
 	font-style: italic;
 	
 }
-.comparison-copy {
-    color:rgb(85,85,85);
-    font-size: 13px;
-}
 
-.date-indicator{
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    /* align-self: flex-end;
-    justify-content: flex-start; */
-    /* width:100%; */
-    }
+
 
 .total-case-date{
     margin-left: auto;
