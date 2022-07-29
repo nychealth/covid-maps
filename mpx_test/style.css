@@ -9,7 +9,7 @@ canvas {
 }
   
 p {
-    font-size: 14px;
+    font-size: 18px;
     /* margin: 5px; */
     /* margin: 0; */
 
@@ -28,7 +28,7 @@ p.cBottom {
 
 #diagnosisDate {
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
     padding-bottom: 10px;
 	font-style: italic;
 	
