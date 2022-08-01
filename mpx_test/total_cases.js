@@ -22,7 +22,7 @@ async function getData() {
         let mydate =  new Date(diagnosisDate); 
         const month = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"];
-        let outputDate = `${month[mydate.getMonth()]} ${mydate.getDate()+2}`;
+        let outputDate = `${month[mydate.getMonth()]} ${mydate.getDate()}`;
         //let outputDate = 'DOHMH: June 20, 2022; HERDS: June 21, 2022';
 		
         document.getElementById("diagnosisDate").innerHTML = outputDate;
