@@ -12,7 +12,7 @@ async function getData() {
 
     table.forEach(e => {
         caseInfoArr = e.split(',');
-        let percDoses = caseInfoArr[5];
+        let percDoses = caseInfoArr[6];
  
         document.getElementById("perc_doses").innerHTML = percDoses;
 		
