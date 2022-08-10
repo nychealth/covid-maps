@@ -14,8 +14,7 @@ async function getData() {
         caseInfoArr = e.split(',');
         let percDoses = caseInfoArr[5];
  
-        document.getElementById("diagnosisDate").innerHTML = outputDate;
-        document.getElementById("perc_doses").innerHTML = parseInt(percDoses).toLocaleString();
+        document.getElementById("perc_doses").innerHTML = percDoses;
 		
 		
   })   
