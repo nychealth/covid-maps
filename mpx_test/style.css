@@ -19,6 +19,11 @@ p.dateNum {
     margin: 1px;
 }
 
+p.dateNum2 {
+    margin: 1px;
+    float: right;
+}
+
 p.cBottom {
     margin-bottom: 0;
 
