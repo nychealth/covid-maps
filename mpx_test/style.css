@@ -17,6 +17,7 @@ p {
 
 p.dateNum {
     margin: 1px;
+    float: left;
 }
 
 p.dateNum2 {
@@ -47,7 +48,10 @@ p.cBottom {
 	
 }
 
-.total-case-date{
+.total-case-date {
     margin-left: auto;
 	font-size: 13px;
+	content: "";
+	display: table;
+	clear: both;
   }
