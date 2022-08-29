@@ -34,7 +34,13 @@ p.cBottom {
 	
 }
 
-
+#prodDate {
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 10px;
+	font-style: italic;
+	
+}
 
 .total-case-date{
     margin-left: auto;
