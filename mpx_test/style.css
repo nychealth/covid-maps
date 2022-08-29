@@ -17,12 +17,10 @@ p {
 
 p.dateNum {
     margin: 1px;
-    float: left;
 }
 
 p.dateNum2 {
     margin: 1px;
-    float: right;
 }
 
 p.cBottom {
@@ -30,7 +28,18 @@ p.cBottom {
 
 }
   
-  
+#left, #right {
+	float: left;
+}
+
+#left {
+ width: 30%;
+}
+
+# right{
+ width: 30%
+
+}
 
 #diagnosisDate {
     text-align: center;
@@ -51,7 +60,4 @@ p.cBottom {
 .total-case-date {
     margin-left: auto;
 	font-size: 13px;
-	content: "";
-	display: table;
-	clear: both;
   }
