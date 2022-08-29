@@ -12,7 +12,8 @@ async function getData() {
 
     table.forEach(e => {
         caseInfoArr = e.split(',');
-        let diagnosisDate = caseInfoArr[0];
+	let pubDate = caseInfoArr[0]
+        let diagnosisDate = caseInfoArr[2];
         let totalCases = caseInfoArr[1];
  
 
@@ -20,12 +21,15 @@ async function getData() {
         let lang = document.documentElement.lang
 
         let mydate =  new Date(diagnosisDate); 
+	let mydate2 = new Date(pubDate);
         const month = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"];
         let outputDate = `${month[mydate.getMonth()]} ${mydate.getDate()}`;
+	let pubDate = `${month[mydate2.getMonth()]} ${mydate2.getDate()}`;
         //let outputDate = 'DOHMH: June 20, 2022; HERDS: June 21, 2022';
 		
         document.getElementById("diagnosisDate").innerHTML = outputDate;
+	document.getElementById("prodDate").innerHTML = pubDate;
         document.getElementById("totalCases").innerHTML = parseInt(totalCases).toLocaleString();
 		
 		
