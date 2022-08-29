@@ -21,7 +21,9 @@ p.dateNum {
 
 p.dateNum2 {
     margin: 1px;
-    text-align: right;
+    text-align: right; 
+    font-size: 10px;
+
 }
 
 p.cBottom {
@@ -34,12 +36,13 @@ p.cBottom {
 }
 
 #left {
- width: 45%;
+ width: 50%;
  padding-right: 3px;
 }
 
 # right{
- width: 30%
+ width: 30%;
+text-align: right;
 
 }
 
