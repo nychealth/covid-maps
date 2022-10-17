@@ -265,3 +265,66 @@ h2, h3 {
             .vg-tooltip {
                 width: 200px!important;
             }
+
+
+
+            /*
+            Top portion of MPXV vax page data
+            */
+            canvas {
+               display: block;
+            }
+  
+            p {
+               font-size: 18px;
+
+
+                }
+
+            p.dateNum {
+                margin: 1px;
+            }
+
+            p.dateNum2 {
+                margin: 1px;
+                text-align: right; 
+            }
+
+            p.cBottom {
+                margin-bottom: 0;
+
+            }
+  
+
+            #left {
+             width: 55%;
+             padding-right: 10px;
+             float: left;
+                }
+
+            #right{
+             width: 45%;
+             padding-left: 10px;
+             text-align: right;
+             float: right;
+            }
+
+            #vaccinationDate {
+                text-align: center;
+                font-size: 18px;
+                 padding-bottom: 10px;
+	             font-style: italic;	
+            }
+
+            #prodDate {
+               text-align: center;
+              font-size: 18px;
+              padding-bottom: 10px;
+        	   font-style: italic;
+            }
+
+            .total-vax-date {
+               margin-left: auto;
+            	font-size: 13px;
+             }
+
