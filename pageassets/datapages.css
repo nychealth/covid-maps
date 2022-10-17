@@ -326,5 +326,10 @@ h2, h3 {
             .total-vax-date {
                margin-left: auto;
             	font-size: 13px;
+		max-height: 50px; 
+		margin-bottom: 0px; 
+		padding-bottom:0px; 
+		padding-top:15px;
+		
              }
 
