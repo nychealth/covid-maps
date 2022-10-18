@@ -17,6 +17,7 @@ p {
 
 p.dateNum {
     margin: 1px;
+    padding-top:10px
 }
 
 p.cBottom {
@@ -28,5 +29,4 @@ p.cBottom {
 .perc-vax-demo{
   margin-left: auto;
   font-size: 14px;
-  margin-top: 10px;
   }
