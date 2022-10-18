@@ -1,4 +1,5 @@
-getData();
+	
+		getData();
 
 
 		/*
@@ -12,9 +13,9 @@ getData();
 		vaxInfoArr = e.split(',');
 		let pubDate = new Date(vaxInfoArr[0]);
 		pubDate = new Date(pubDate.getTime() - pubDate.getTimezoneOffset() * -60000); 
-		//console.log(pubDate);
-        	//let vaccinationDate = ;
-     		 // let totalVaccines = vaxInfoArr[6];
+		console.log(pubDate);
+        //let vaccinationDate = ;
+        let totalVaccines = vaxInfoArr[6];
  
 
         let mydate = pubDate; 
@@ -22,10 +23,12 @@ getData();
         const month = ["January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"];
         let outputDate = `${month[mydate.getMonth()]} ${mydate.getDate()}`;
-	let productionDate = `${month[mydate.getMonth()]} ${mydate.getDate()+3}`;
+		let productionDate = `${month[mydate.getMonth()]} ${mydate.getDate()+3}`;
 		
         document.getElementById("vaccinationDate").innerHTML = outputDate;
-	#document.getElementById("prodDate").innerHTML = productionDate;
+		document.getElementById("prodDate").innerHTML = productionDate;
+        #document.getElementById("totalVaccines").innerHTML = parseInt(totalVaccines).toLocaleString();
+		
 		
 		})   
 		}
