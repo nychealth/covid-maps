@@ -19,8 +19,5 @@
        		 "July", "August", "September", "October", "November", "December"];
      		let outputDate = pubDate.getDate() + "/" + pubDate.getMonth() + "/" + pubDate.getYear()		
                 document.getElementById("vaccinationDate").innerHTML = outputDate;
-
-		let formatted_date = 
-
 		})   
 		}
