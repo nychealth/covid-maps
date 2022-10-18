@@ -10,9 +10,7 @@ canvas {
   
 p {
     font-size: 12px;
-    /* margin: 5px; */
-    /* margin: 0; */
-    color:rgb(80,80,80);
+    color:rgb(94,94,94);
 }
 
 p.dateNum {
