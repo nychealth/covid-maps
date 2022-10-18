@@ -9,10 +9,10 @@ canvas {
 }
   
 p {
-    font-size: 11px;
+    font-size: 12px;
     /* margin: 5px; */
     /* margin: 0; */
-
+    color:rgb(80,80,80);
 }
 
 p.dateNum {
@@ -27,5 +27,6 @@ p.cBottom {
 
 .perc-vax-demo{
     margin-left: auto;
-	font-size: 12px;
+	font-size: 14px;
+
   }
