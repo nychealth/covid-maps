@@ -17,9 +17,10 @@
         	let mydate = pubDate; 
         	const month = ["January", "February", "March", "April", "May", "June",
        		 "July", "August", "September", "October", "November", "December"];
-     		let outputDate = `${mydate.getMonth()} ${mydate.getDate()}`;		
-                document.getElementById("vaccinationDate").innerHTML = pubDate.format('MM/DD/YY');
+     		let outputDate = pubDate.getDate() + "/" + pubDate.getMonth() + "/" + pubDate.getYear()		
+                document.getElementById("vaccinationDate").innerHTML = outputDate;
 
-		
+		let formatted_date = 
+
 		})   
 		}
