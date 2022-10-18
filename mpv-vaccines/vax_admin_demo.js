@@ -13,8 +13,8 @@ getData();
 		let pubDate = new Date(vaxInfoArr[0]);
 		pubDate = new Date(pubDate.getTime() - pubDate.getTimezoneOffset() * -60000); 
 		//console.log(pubDate);
-        //let vaccinationDate = ;
-       // let totalVaccines = vaxInfoArr[6];
+        	//let vaccinationDate = ;
+     		 // let totalVaccines = vaxInfoArr[6];
  
 
         let mydate = pubDate; 
