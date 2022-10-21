@@ -6,7 +6,7 @@
 			Pull in monkeypox total vaccine numbers; clean the data; return elements for the data values to be added to the DOM
 		*/
 		async function getData() {
-		const response = await fetch('https://raw.githubusercontent.com/nychealth/covid-maps/main/mpv-vaccines/IDT_MPXV_doses_given_2022-10-17.csv');
+		const response = await fetch('https://raw.githubusercontent.com/nychealth/mpv-vaccine-data/main/doses/doses-by-day.csv');
 		const data = await response.text();
 		const table = data.split('\n').slice(-2,-1);
 		table.forEach(e => {
