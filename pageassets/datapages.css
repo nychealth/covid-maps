@@ -300,6 +300,7 @@ h2, h3 {
              width: 55%;
              padding-right: 10px;
              float: left;
+	     font-family: 'Helvetica', sans-serif;
                 }
 
             #right{
@@ -307,20 +308,23 @@ h2, h3 {
              padding-left: 10px;
              text-align: right;
              float: right;
+	     font-family: 'Helvetica', sans-serif;
             }
 
             #vaccinationDate {
                 text-align: center;
                 font-size: 18px;
-                 padding-bottom: 10px;
-	             font-style: italic;	
+                padding-bottom: 10px;
+	        font-style: italic;	
+
             }
 
             #prodDate {
-               text-align: center;
+              text-align: center;
               font-size: 18px;
               padding-bottom: 10px;
-        	   font-style: italic;
+              font-style: italic;
+
             }
 
             .total-vax-date {
