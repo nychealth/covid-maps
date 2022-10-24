@@ -30,16 +30,15 @@ p.cBottom {
   margin-left: auto;
   font-size: 14px;
   }
-
 a:link {
-    color: #83c5e6;
+    color: #3377ff;
 }
 
 a:visited {
-    color: #83c5e6;
+    color: #3377ff;
 }
 
 a:hover {
-    color: #83c5e6;
+    color: #3377ff;
     cursor: pointer;
 }
