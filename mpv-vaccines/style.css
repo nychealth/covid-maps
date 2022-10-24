@@ -32,14 +32,14 @@ p.cBottom {
   }
 
 a:link {
-    color: #0000ee;
+    color: #4da6ff;
 }
 
 a:visited {
-    color: #0000ee;
+    color: #4da6ff;
 }
 
 a:hover {
-    color: #0000ee;
+    color: #4da6ff;
     cursor: pointer;
 }
