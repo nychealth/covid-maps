@@ -30,3 +30,16 @@ p.cBottom {
   margin-left: auto;
   font-size: 14px;
   }
+
+a:link {
+    color: #0000ee;
+}
+
+a:visited {
+    color: #0000ee;
+}
+
+a:hover {
+    color: #0000ee;
+    cursor: pointer;
+}
