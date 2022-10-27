@@ -275,24 +275,21 @@ h2, h3 {
                display: block;
             }
   
-            p {
-               font-size: 18px;
-
-
-                }
-
             p.dateNum {
                 margin: 1px;
+		font-size: 18px;
+
             }
 
             p.dateNum2 {
                 margin: 1px;
                 text-align: right; 
+		font-size: 18px;		    
             }
 
             p.cBottom {
                 margin-bottom: 0;
-
+		font-size: 18px;
             }
   
 
